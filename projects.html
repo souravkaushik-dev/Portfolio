@@ -21,7 +21,7 @@
 
   <!-- Default Font -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/menu.css">
+  <link rel="stylesheet" type="text/css" href="css/menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
@@ -687,7 +687,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      display: none; /* Hidden by default */
+      display: none;
+      /* Hidden by default */
       position: fixed;
       top: 20px;
       right: 20px;
@@ -707,7 +708,8 @@
     }
 
     /* Initial state */
-    .line1, .line3 {
+    .line1,
+    .line3 {
       transition: transform 0.3s 0.3s, opacity 0.3s;
     }
 
@@ -731,13 +733,15 @@
     /* Show hamburger button on mobile devices */
     @media (max-width: 768px) {
       .hamburger {
-        display: flex; /* Display hamburger button on mobile */
+        display: flex;
+        /* Display hamburger button on mobile */
       }
     }
 
     /* Menu styles */
     .menu {
-      display: none; /* Hidden by default */
+      display: none;
+      /* Hidden by default */
       position: fixed;
       top: 0;
       left: 0;
@@ -790,36 +794,37 @@
               style="--i: 10;">s</span><span _ngcontent-ng-c2918712359="" style="--i: 11;">h</span><span
               _ngcontent-ng-c2918712359="" style="--i: 12;">i</span><span _ngcontent-ng-c2918712359=""
               style="--i: 13;">k</span></a> <button class="hamburger">
-                <svg viewBox="0 0 32 32">
-                  <path d="M4 8H28" class="line line1"></path>
-                  <path d="M4 16H28" class="line line2"></path>
-                  <path d="M4 24H28" class="line line3"></path>
-                </svg>
-              </button>
-            
-              <nav class="menu">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="projects.html">Projects</a></li>
-                  <li><a href="education.html">Education</a></li>
-                  <li><a href="about.html">About</a></li>
-                </ul>
-              </nav>
-            
-              <script>
-                document.querySelector('.hamburger').addEventListener('click', function() {
-                  this.classList.toggle('active');
-                  document.querySelector('.menu').classList.toggle('active');
-                });
-              </script>
-              
-              </div>
+            <svg viewBox="0 0 32 32">
+              <path d="M4 8H28" class="line line1"></path>
+              <path d="M4 16H28" class="line line2"></path>
+              <path d="M4 24H28" class="line line3"></path>
+            </svg>
+          </button>
+
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+
+          <script>
+            document.querySelector('.hamburger').addEventListener('click', function () {
+              this.classList.toggle('active');
+              document.querySelector('.menu').classList.toggle('active');
+            });
+          </script>
+
+        </div>
         <div _ngcontent-ng-c2918712359="" class="center-side">
           <div _ngcontent-ng-c2918712359="" class="nav-links"><a _ngcontent-ng-c2918712359=""
               routerlinkactive="active-link" class="nav-link active-link" href="projects.html"><img
                 _ngcontent-ng-c2918712359="" class="svg nav-icon" src="assets/svgs/project.svg" alt="project"> Projects
-            </a><a _ngcontent-ng-c2918712359="" routerlinkactive="active-link" class="nav-link" href="education.html"><img
-                _ngcontent-ng-c2918712359="" class="svg nav-icon" src="assets/svgs/education.svg" alt="education">
+            </a><a _ngcontent-ng-c2918712359="" routerlinkactive="active-link" class="nav-link"
+              href="education.html"><img _ngcontent-ng-c2918712359="" class="svg nav-icon"
+                src="assets/svgs/education.svg" alt="education">
               Education </a><a _ngcontent-ng-c2918712359="" routerlinkactive="active-link" class="nav-link"
               href="about.html"><img _ngcontent-ng-c2918712359="" class="svg nav-icon" src="assets/svgs/info.svg"
                 alt="info"> About </a><!----></div>
@@ -841,7 +846,26 @@
                 _ngcontent-ng-c404706253="" class="slider"></span></label></theme-button></div>
       </nav>
     </app-header><!---->
+    <div _ngcontent-ng-c186356307="" class="router-container"><router-outlet
+        _ngcontent-ng-c186356307=""></router-outlet><app-projects _nghost-ng-c2376154926="">
+        <div _ngcontent-ng-c2376154926="" class="cards-list col-11"><app-project-card _ngcontent-ng-c2376154926="" class="project-card fadeInUpConf"
+          _nghost-ng-c1804446950="" style="--i: 4;"><a _ngcontent-ng-c1804446950="" target="_blank"
+            rel="noopener noreferrer" class="project-container" href="impulzepage.html"><img
+              _ngcontent-ng-c1804446950="" alt="Screenshot" class="project-image"
+              src="https://i.postimg.cc/SsLgL6py/impulze.jpg">
+            <div _ngcontent-ng-c1804446950="" class="project-info"><a _ngcontent-ng-c1804446950="" class="forks"
+                href="impulzepage.html"><img _ngcontent-ng-c1804446950="" src="assets/svgs/fork.svg"
+                  alt="forks" class="svg"><span _ngcontent-ng-c1804446950="">0</span></a><a
+                _ngcontent-ng-c1804446950="" class="stars" href="index.html"><img
+                  _ngcontent-ng-c1804446950="" src="assets/svgs/star.svg" alt="stars" class="svg"><span
+                  _ngcontent-ng-c1804446950="">0</span></a></div><!---->
+            <div _ngcontent-ng-c1804446950="" class="project-details">
+              <h3 _ngcontent-ng-c1804446950="">Impulze - Music streaming Android app</h3>
+              <p _ngcontent-ng-c1804446950="">Flutter</p>
+            </div>
+          </a></app-project-card><!----></div>
       </app-projects><!----></div>
+    </app-projects><!----></div>
   </app-root>
 
 </body>
