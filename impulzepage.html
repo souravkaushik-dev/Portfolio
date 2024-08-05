@@ -46,6 +46,51 @@
             /* Ensures the image fits within the round shape */
         }
     </style>
+    <style>
+        .section-title {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .wow.fadeInUp {
+            animation: fadeInUp 1s;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .button-2 {
+            background-color: rgba(51, 51, 51, 0.05);
+            border-radius: 8px;
+            border-width: 0;
+            color: #333333;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            margin: 10px 0;
+            /* Margin to separate from the text */
+            padding: 10px 12px;
+            text-align: center;
+            transition: all 200ms;
+            vertical-align: baseline;
+            white-space: nowrap;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+    </style>
 </head>
 
 <body>
@@ -108,6 +153,11 @@
                             <div class="section-title">
                                 <h1 class="wow fadeInUp" data-wow-delay=".2s">Our Creative Space</h1>
                                 <h2 class="wow fadeInUp" data-wow-delay=".4s">Monthly updates and fresh UI enhancements <br class="d-none d-lg-block">Delivered by our expert team at Genius Lab and Studio.</h2>
+                            </div>
+                            <div class="section-title">
+                                <h1 class="wow fadeInUp" data-wow-delay=".2s">Beta Program Coming Soon</h1>
+                                <h2 class="wow fadeInUp" data-wow-delay=".4s">Exciting news! The IMPULZE music player beta is launching soon <br class="d-none d-lg-block">Get early access and help us refine the app!</h2>
+                                <button class="button-2">Get Early Access</button>
                             </div>
                             <!-- section-title end  -->
                         </div>
