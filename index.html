@@ -15,7 +15,7 @@
 
     <!-- Template Favicon & Icons Start -->
     <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.ico" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="manifest" href="img/favicon/manifest.webmanifest">
     <!-- Template Favicon & Icons End -->
@@ -63,7 +63,7 @@
         <nav id="menu" class="menu">
           <ul class="menu__list d-flex justify-content-start">
             <li class="menu__item">
-              <a class="menu__link btn" href="#home">
+              <a class="menu__link btn" href="index.html">
                 <span class="menu__caption">Home</span>
                 <i class="ph-bold ph-house-simple"></i>
               </a>
@@ -205,7 +205,7 @@
             </p>
             <h1 class="headline__title animate-headline">I'm Sourav Kaushik<br>Researcher discovering new IT advancements</h1>
             <div class="headline__btnholder d-flex flex-column flex-sm-row">
-              <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline" href="#portfolio">
+              <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline" href="reports.html">
                 <span class="btn-caption">My Works</span>
                 <i class="ph-bold ph-squares-four"></i>
               </a>
@@ -271,7 +271,7 @@
                   <a href="img/works/1400x1400_w02.webp" data-image="img/works/800_w02-thumb.webp" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
                     <img src="images/800_w02-thumb.webp" class="gallery__image" itemprop="thumbnail" alt="Image description">
                   </a>
-                  <figcaption class="gallery__descr opposite" itemprop="caption description">
+                  <a href="reports.html" class="gallery__descr opposite" itemprop="caption description" target="_blank"> <!-- Change to your desired URL -->
                     <h5 class="opposite">Dashboard Template</h5>
                     <div class="card__tags d-flex flex-wrap">
                       <span class="rounded-tag">Apps</span>
@@ -451,21 +451,23 @@
                 </div>
                 <!-- services grid cards single item -->
                 <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
-                  <div class="cards__card d-flex flex-column">
-                    <div class="cards__descr">
-                      <h4 class="cards__title animate-in-up">Researcher and Analyst</h4>
-                      <div class="cards__tags d-flex flex-wrap animate-in-up">
-                        <span class="rounded-tag tag-outline">IT</span>
-                        <span class="rounded-tag tag-outline">Analytics</span>
+                  <a href="reports.html" class="cards__link"> <!-- Add the link here -->
+                    <div class="cards__card d-flex flex-column">
+                      <div class="cards__descr">
+                        <h4 class="cards__title animate-in-up">Researcher and Analyst</h4>
+                        <div class="cards__tags d-flex flex-wrap animate-in-up">
+                          <span class="rounded-tag tag-outline">IT</span>
+                          <span class="rounded-tag tag-outline">Analytics</span>
+                        </div>
+                        <p class="small cards__text animate-in-up">Unlocking insights through research and analytics.</p>
                       </div>
-                      <p class="small cards__text animate-in-up">Unlocking insights through research and analytics.
-                      </p>
+                      <div class="cards__image d-flex">
+                        <img src="images/1200x900_s03.webp" alt="Service/Feature Image">
+                      </div>
                     </div>
-                    <div class="cards__image d-flex">
-                      <img src="images/1200x900_s03.webp" alt="Service/Feature Image">
-                    </div>
-                  </div>
+                  </a>
                 </div>
+                
                 <!-- services grid cards single item -->
                
     
