@@ -40,6 +40,7 @@
     <meta name="msapplication-navbutton-color" content="#ededed">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ededed">
     <!-- Custom Browser Color End -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -242,8 +243,8 @@
 
               <!-- Headline Start -->
               <div id="headline" class="headline">
-                <h1 class="headline__title">Welcome To 
-                  <br>EDOT</h1>
+                <h1 class="headline__title">Step into
+                  <br>EDOT!</h1>
                 
                 <div class="headline__btnholder d-flex">
                   <a href="#0" id="menu-trigger-headline" class="btn-bottom more">
@@ -830,68 +831,111 @@
   </section>
   <!-- Contact Section End -->
 
-  <!-- Notify Popup Start -->
-  <div id="notify" class="popup notify">
-    <div class="popup__container">
+<!-- Notify Popup Start -->
+<div id="notify" class="popup notify">
+  <div class="popup__container">
 
       <!-- Popup Content Start -->
       <div class="popup__content border-radius-l">
-        <!-- popup close button -->
-        <a id="notify-close" class="btn btn-s btn-s-icon popup-close" href="#0">
-          <span class="btn__background light"></span>
-          <span class="btn__text dark">
-            <i class="fa-solid fa-xmark"></i>
-            <em class="btn-title">Close</em>
-            <em class="btn-hover">Close</em>
-          </span>
-        </a>
-
-        <!-- Notify Popup Title Start -->
-        <div class="popup-title">
-          <p class="popup-title__title">Get to know about our new reports</p>
-          <p class="popup-title__text">Subscribe to our newsletter and we will send you a notification about the new reports</p>
-          <p class="popup-title__text">Soon this feature'll be available</p>
-        </div>
-        <!-- Notify Popup Title End -->
-
-        <!-- Notify Form Container Start -->
-        <div class="form-container">
-
-          <!-- Reply Messages Start-->
-          <div class="reply-group subscription-ok">
-            <i class="fa-solid fa-circle-check reply-group__icon"></i>
-            <p class="reply-group__title txt-light">Done!</p>
-            <span class="reply-group__text">Thanks for subscribing. We will send you a notification about our launch.</span>
-          </div>
-          <div class="reply-group subscription-error">
-            <i class="fa-solid fa-face-frown-open reply-group__icon"></i>
-            <p class="reply-group__title">Ooops!</p>
-            <span class="reply-group__text">Something went wrong. Please try again later.</span>
-          </div>
-          <!-- Reply Messages End-->
-
-          <!-- Notify Contact Form Start-->
-          <form class="form notify-form form-dark">
-            <input class="margin-l" type="email" placeholder="Your Email" required="">
-            <button class="btn btn-l" type="submit">
-              <span class="btn__background dark"></span>
-              <span class="btn__text light">
-                <em class="btn-title">Submit</em>
-                <em class="btn-hover">Submit</em>
+          <!-- Popup close button -->
+          <a id="notify-close" class="btn btn-s btn-s-icon popup-close" href="#0" onclick="closePopup()">
+              <span class="btn__background light"></span>
+              <span class="btn__text dark">
+                  <i class="fa-solid fa-xmark"></i>
+                  <em class="btn-title">Close</em>
+                  <em class="btn-hover">Close</em>
               </span>
-            </button>
-          </form>
-          <!-- Notify Contact Form End-->
+          </a>
 
-        </div>
-        <!-- Notify Form Container End -->
+          <!-- Notify Popup Title Start -->
+          <div class="popup-title">
+              <p class="popup-title__title">Get to know about our new reports</p>
+              <p class="popup-title__text">Subscribe to our newsletter and we will send you a notification about the new reports.</p>
+              <p class="popup-title__text">Soon this feature will be available.</p>
+          </div>
+          <!-- Notify Popup Title End -->
+
+          <!-- Notify Form Container Start -->
+          <div class="form-container">
+
+              <!-- Reply Messages Start-->
+              <div class="reply-group subscription-ok" style="display: none;">
+                  <i class="fa-solid fa-circle-check reply-group__icon"></i>
+                  <p class="reply-group__title txt-light">Done!</p>
+                  <span class="reply-group__text">Thanks for subscribing. We will send you a notification about our launch.</span>
+              </div>
+              <div class="reply-group subscription-error" style="display: none;">
+                  <i class="fa-solid fa-face-frown-open reply-group__icon"></i>
+                  <p class="reply-group__title">Ooops!</p>
+                  <span class="reply-group__text">Something went wrong. Please try again later.</span>
+              </div>
+              <!-- Reply Messages End-->
+
+              <!-- Notify Contact Form Start-->
+              <form class="form notify-form form-dark" id="notifyForm">
+                  <input class="margin-l" type="email" id="userEmail" placeholder="Your Email" required="">
+                  <button class="btn btn-l" type="submit">
+                      <span class="btn__background dark"></span>
+                      <span class="btn__text light">
+                          <em class="btn-title">Submit</em>
+                          <em class="btn-hover">Submit</em>
+                      </span>
+                  </button>
+              </form>
+              <!-- Notify Contact Form End-->
+
+          </div>
+          <!-- Notify Form Container End -->
 
       </div>
       <!-- Popup Content End -->
 
-    </div>
   </div>
-  <!-- Notify Popup End -->
+</div>
+<!-- Notify Popup End -->
+
+<script type="text/javascript">
+  // Initialize EmailJS with your public user ID
+  (function () {
+      emailjs.init("EvuS31VdAmMae0z8W"); // Use your public key here
+  })();
+
+  function closePopup() {
+      document.getElementById('notify').style.display = 'none'; // Hide the popup
+  }
+
+  document.getElementById('notifyForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const email = document.getElementById('userEmail').value;
+
+      // Send the email using EmailJS
+      emailjs.send("service_wsqlj3t", "template_kz1l4u9", {
+          user_email: email // Use the key defined in your template
+      })
+      .then(function(response) {
+          // Show success message
+          document.querySelector('.subscription-ok').style.display = 'block';
+          document.querySelector('.subscription-error').style.display = 'none';
+          console.log('Email sent successfully!', response.status, response.text);
+      }, function(error) {
+          // Show error message
+          document.querySelector('.subscription-ok').style.display = 'none';
+          document.querySelector('.subscription-error').style.display = 'block';
+          console.error('Failed to send email. Error:', error);
+      });
+
+      // Clear the input field
+      document.getElementById('userEmail').value = '';
+  });
+
+  // Show the popup on page load (for testing purposes)
+  window.onload = function() {
+      document.getElementById('notify').style.display = 'flex'; // Show the popup
+  };
+</script>
+
+
 
   <!-- Root element of PhotoSwipe. Must have class pswp. -->
   <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
