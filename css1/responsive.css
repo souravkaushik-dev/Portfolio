@@ -1,0 +1,73 @@
+@media (min-width: 1400px) {
+.dtr-content-area, .dtr-widget-area { width: 70%; }
+.dtr-widget-area { width: 26%; }
+}
+
+@media (max-width: 1024px) {
+/* portfolio */
+.dtr-portfolio-grid-2col .dtr-portfolio-item, .dtr-portfolio-grid-3col .dtr-portfolio-item, .dtr-portfolio-grid-4col .dtr-portfolio-item { width: 50%; }
+/* blog */
+.dtr-blog-grid .dtr-post-item, .dtr-search-grid .dtr-search-item, .dtr-blog-grid.dtr-blog-grid-3col .dtr-post-item, .dtr-relatedposts-grid .dtr-relatedposts-item { width: 49.99%; }
+}
+
+@media (max-width: 992px) {
+/* header */
+#dtr-topbar, #dtr-header-global, #dtr-header-global.header-fixed, .sf-sub-indicator, .main-navigation .sf-menu { display: none; }
+#dtr-responsive-header, .slicknav_menu, #dtr-menu-button { display: block; }
+.dtr-copyright, .dtr-copyright .text-left, .dtr-copyright .text-right { text-align: center !important; }
+.copyright-list { justify-content: center; }
+.copyright-list li { margin: 0 10px; }
+/* layout */
+.elementor-default.elementor-page #dtr-main-wrapper { padding-top: 0 !important; }
+.elementor-default.elementor-page #dtr-main-wrapper { padding-bottom: 0 !important; }
+.elementor-default.elementor-page.single-post #dtr-main-wrapper { padding-top: 0 !important; padding-bottom: 50px !important; }
+#dtr-main-wrapper { padding-top: 50px; padding-bottom: 100px; }
+.dtr-page-title--content { margin-top: 50px; }
+.dtr-content-area, .dtr-widget-area { width: 100%; float: none; }
+#dtr-secondary-section { margin-top: 100px; }
+.container { width: 100%; max-width: 100%; }
+#dtr-wrapper { padding-left: 0; }
+.elementor-default.elementor-page.single-dtr_portfolio .dtr-single-post-nav { margin-bottom: 100px; }
+/*comments*/
+.comment-list li.comment ol.children { margin-left: 20px; }
+.dtr-comment-meta { display: block; }
+.comment-reply-link { margin: 10px 0 0 0; }
+#commentform { padding: 30px; }
+/*-- blog --*/
+.dtr-author-info, .dtr-author-contentbox { width: 100%; display: block; text-align: center; }
+.dtr-author-avatar { text-align: center; padding-right: 0; margin: 0 auto 20px auto; }
+.text-right, .dtr-single-nav-next { text-align: left !important; }
+.dtr-single-nav-right-icon { justify-content: flex-start; }
+.small-device-space { margin: 30px 0 0 0; }
+.dtr-copyright .small-device-space { margin: 20px 0 0 0; }
+.dtr-single-meta, .dtr-entry-meta { display: block; }
+.dtr-single-meta .dtr-meta-item, .dtr-entry-meta .dtr-meta-item { display: inline-block; }
+}
+
+@media (max-width: 782px) {
+.dtr-btn, input[type="submit"], input[type="reset"], .dtr-px-lg, .dtr-px-sm { padding-left: 20px; padding-right: 20px; }
+.heading-404 { font-size: 7em; }
+/* portfolio */
+.dtr-portfolio-grid-2col, .dtr-portfolio-grid-3col, .dtr-portfolio-grid-4col { margin: 0; }
+.dtr-portfolio-grid-2col .dtr-portfolio-item, .dtr-portfolio-grid-3col .dtr-portfolio-item, .dtr-portfolio-grid-4col .dtr-portfolio-item { width: 100%; padding: 0; }
+/* blog */
+.dtr-blog-grid .dtr-post-item, .dtr-search-grid .dtr-search-item, .dtr-blog-grid.dtr-blog-grid-3col .dtr-post-item { width: 100%; padding: 0; }
+.dtr-blog-grid .dtr-post-grid, .dtr-search-grid-wrapper .dtr-search-grid { margin: 0; }
+.dtr-blog-list-layout, .dtr-blog-list-layout-thumb, .dtr-entry-content-list-layout { display: block; width: 100%; }
+.dtr-blog-list-layout-thumb { min-height: 280px; margin-bottom: 30px; }
+.dtr-entry-content-list-layout-inner { padding: 0; }
+.dtr-title-nav { display: block; }
+.dtr-title-nav .dtr-single-nav-prev { width: 100%; padding-right: 0; }
+.dtr-title-nav .dtr-single-nav-next { width: 100%; padding-left: 0; margin-top: 20px; }
+.dtr-title-nav .dtr-single-nav-next a { justify-content: flex-start; }
+/*-- forms --*/
+.dtr-form-row, .dtr-form-row-2col, .dtr-form-row-3col, .dtr-form-row-unequal, .dtr-form-row-2col-unequal { margin-right: 0; margin-left: 0; }
+.dtr-form-row, .dtr-form-row-2col, .dtr-form-row-3col, .dtr-form-row-unequal, .dtr-form-row-2col-unequal, .dtr-form-row-2col .dtr-form-column, .dtr-form-row-3col .dtr-form-column, .dtr-form-row-unequal .dtr-form-column, .dtr-form-row-unequal .dtr-form-column:last-child, .dtr-form-row-2col-unequal .dtr-form-column, .dtr-form-row-2col-unequal .dtr-form-column:last-child { width: 100%; padding-right: 0; padding-left: 0; }
+.dtr-testimonial { padding: 20px; }
+.heading-404 { width: 300px; height: 140px; min-width: auto; min-height: auto; }
+.dtr-single-nav-text a { padding: 15px; font-size: 18px; line-height: 22px; }
+}
+
+@media only screen and (max-width: 600px) {
+.heading-404 { width: 200px; height: 90px; min-width: auto; min-height: auto; }
+}
