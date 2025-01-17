@@ -45,19 +45,14 @@ Feel free to explore my work and get a sense of my passion for development and d
    - **Certification Body**: EC-Council
    - **Year**: 2023
    - **Description**: Certification demonstrating expertise in identifying and addressing security vulnerabilities in systems, networks, and applications.
-
-3. **Additional Certifications**:
-   - **Advanced Programming with C (ongoing)**
-   - **Web Development and Mobile App Development (ongoing)**
-
 ---
 
 ## Technologies Used
 
-- **Programming Languages**: C, Dart, JavaScript, Python
+- **Programming Languages**: C, Dart, JavaScript
 - **Frameworks**: Flutter, Node.js
 - **Tools**: Android Studio, Visual Studio Code
-- **Databases**: Firebase, PostgreSQL
+- **Databases**: Firebase
 - **Cybersecurity Tools**: Kali Linux, Burp Suite
 - **Version Control**: Git, GitHub
 
