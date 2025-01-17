@@ -14,14 +14,16 @@ body {
 .terminal-window {
   padding: 20px;
   background: #F3E5F5;
-  color:#757575;
+  color: #757575;
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   height: 600px;
-  width: 1500px;
+  width: 100%;
+  max-width: 1500px;
   overflow-y: auto;
   border: 1px solid #F3E5F5;
   border-radius: 40px;
+  margin: 0 auto;
 }
 
 .terminal-output {
@@ -57,4 +59,50 @@ body {
 .reveal-card-zoom:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .terminal-window {
+    padding: 15px;
+    font-size: 14px;
+    height: 500px;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .terminal-input-wrapper input {
+    font-size: 14px;
+  }
+
+  .my-work-card {
+    padding: 15px;
+  }
+
+  .reveal-card-zoom:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-window {
+    padding: 10px;
+    font-size: 12px;
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .terminal-input-wrapper input {
+    font-size: 12px;
+  }
+
+  .my-work-card {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .my-work-feature h3 {
+    font-size: 16px;
+  }
 }
