@@ -47,7 +47,6 @@ Credits:
 3. DotStudios
    - DotStudios is a tech studio founded by me, Sourav Kaushik, focusing on creating innovative solutions, mobile apps, and digital products. Our mission is to push the boundaries of technology while delivering high-quality solutions that meet users' needs. DotStudios is a place where creativity meets technology to produce impactful digital experiences.
 
-Use the command "open <project_name>" to view more details about these projects.`;
     } else if (input === 'relating to') {
         return `Relating to Sourav
 
@@ -73,6 +72,6 @@ Feel free to connect with me to collaborate, share ideas, or explore new possibi
    
 Feel free to ask if you need further details on any specific certification or course!`;
     } else {
-        return `Unknown command: "${input}". Type "help" for available commands.`;
+        return `Unknown command: "${input}". Type "sourav" for available commands.`;
     }
 }
