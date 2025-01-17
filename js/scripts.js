@@ -38,7 +38,7 @@ Credits:
 - Developed with love and attention by Sourav Kaushik
 - Special thanks to dot Studios for their continuous support.`;
     } else if (input === 'projects') {
-        return `1. **EDOT (Exploration and Dissection of Technology)** 
+        return `1. EDOT (Exploration and Dissection of Technology)
    - EDOT is a personal project focused on reverse engineering and security analysis. It aims to uncover software vulnerabilities, dissect applications, and analyze security systems to improve them. Through EDOT, I apply advanced cybersecurity techniques and reverse engineering skills to understand software in-depth and contribute to a more secure digital landscape.
 
 2. 10-bit (Malware Analysis Project)
