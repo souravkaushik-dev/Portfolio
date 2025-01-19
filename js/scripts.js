@@ -38,15 +38,16 @@ Credits:
 - Developed with love and attention by Sourav Kaushik
 - Special thanks to dot Studios for their continuous support.`;
     } else if (input === 'projects') {
-        return `1. EDOT (Exploration and Dissection of Technology)
+        return `1. **EDOT (Exploration and Dissection of Technology)** 
    - EDOT is a personal project focused on reverse engineering and security analysis. It aims to uncover software vulnerabilities, dissect applications, and analyze security systems to improve them. Through EDOT, I apply advanced cybersecurity techniques and reverse engineering skills to understand software in-depth and contribute to a more secure digital landscape.
 
-2. 10-bit (Malware Analysis Project)
+2. **10-bit (Malware Analysis Project)**
    - 10-bit is a malware analysis project that aims to study and reverse-engineer malicious software to understand its behavior, vulnerabilities, and impact on systems. This project involves the analysis of malware samples, their network interactions, and how they exploit security flaws. The goal is to learn from these malicious programs to enhance security measures and prevent similar attacks.
 
-3. DotStudios
+3. **DotStudios**
    - DotStudios is a tech studio founded by me, Sourav Kaushik, focusing on creating innovative solutions, mobile apps, and digital products. Our mission is to push the boundaries of technology while delivering high-quality solutions that meet users' needs. DotStudios is a place where creativity meets technology to produce impactful digital experiences.
 
+Use the command "open <project_name>" to view more details about these projects.`;
     } else if (input === 'relating to') {
         return `Relating to Sourav
 
@@ -60,18 +61,22 @@ Feel free to connect with me to collaborate, share ideas, or explore new possibi
     } else if (input === 'education') {
         return `Education and Certifications
 
-1. Bachelor of Computer Applications (BCA)
+1. **Bachelor of Computer Applications (BCA)**
    - Institution: Amity University (Online)
    - Duration: 2023 - 2026
    - Description: A program focused on providing foundational knowledge in computer science, programming, and technology, with a special emphasis on software development and cybersecurity.
 
-2. Certified Ethical Hacker (CEH)
+2. **Certified Ethical Hacker (CEH)**
    - Certification Body: EC-Council
    - Year: 2023
    - Description: A certification that demonstrates my expertise in identifying and addressing security vulnerabilities in systems, networks, and applications.
-   
+
+3. **Other Certifications and Courses:**
+   - Advanced Programming with C (ongoing)
+   - Web Development and Mobile App Development (ongoing)
+
 Feel free to ask if you need further details on any specific certification or course!`;
     } else {
-        return `Unknown command: "${input}". Type "sourav" for available commands.`;
+        return `Unknown command: "${input}". Type "help" for available commands.`;
     }
 }
