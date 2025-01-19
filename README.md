@@ -1,15 +1,66 @@
-# Profile
 
-Hello! I’m Sourav Kaushik, a passionate and dedicated student currently pursuing a Bachelor of Computer Applications (BCA) from Amity University Online. With a strong foundation in computer science, I have developed a deep interest in the fields of cybersecurity, app development, and reverse engineering. I am a Certified Ethical Hacker (CEH), and my passion for uncovering hidden vulnerabilities has driven me to continuously push the boundaries of my knowledge in the rapidly evolving IT landscape.
+# Portfolio
 
-Throughout my journey, I have had the opportunity to explore various facets of cybersecurity, including scanning websites for vulnerabilities, identifying weaknesses, and providing detailed reports. These vulnerability assessments have led to the discovery of significant bugs, all of which are meticulously documented and accessible via my portfolio. I believe in the importance of thorough documentation, and I strive to provide actionable insights in my reports to help organizations enhance their security posture.
+Welcome to the **Sourav Kaushik** Portfolio Website! This is my personal portfolio showcasing my work as a **Certified Ethical Hacker (CEH)**, **Cybersecurity Researcher**, and **App Developer**. The portfolio includes my projects, achievements, and details about my skills and experience in app development, cybersecurity, and reverse engineering.
 
-In addition to vulnerability scanning, I am deeply committed to the art of reverse engineering. I have reverse-engineered numerous popular software applications, gaining invaluable insights into their inner workings. This process has sharpened my analytical and problem-solving skills, allowing me to dissect complex systems, uncover flaws, and understand the intricate mechanisms that drive software functionalities.
+## Features
 
-My journey so far has included reverse engineering prominent software applications like TLauncher, as well as identifying and reporting bugs across various websites. Each of these experiences has not only enhanced my technical skills but also strengthened my ability to approach challenges with a hacker’s mindset—anticipating potential vulnerabilities and crafting solutions to address them.
+- **About Me**: A brief introduction to my background, skills, and expertise in app development and ethical hacking.
+- **Projects Showcase**: A detailed section showcasing my projects, including security research, ethical hacking reports, and various app development projects.
+- **Working Terminal**: A unique feature where you can interact with a functional terminal right in the portfolio website—rarely seen in personal portfolios!
+- **UI Inspiration**: The user interface design ideas were inspired by the elegant and minimalistic style of **craftsmen.tech**.
+- **Contact Section**: Easy ways to get in touch with me via email or social media.
+- **Responsive Design**: Optimized for desktop and mobile devices with a clean, minimal user interface.
+- **Skills & Expertise**: Highlighting my technical skills, tools I work with, and professional capabilities.
 
-Whether it's app development, bug hunting, or reverse engineering, my goal is to continuously expand my expertise and contribute meaningfully to the cybersecurity and development communities. You can explore all my vulnerability reports and reverse engineering projects through my portfolio, where I showcase detailed analyses of each project I've worked on.
+## Technologies Used
 
-I am committed to becoming one of the top bug hunters in the industry and am always excited to collaborate with like-minded professionals. If you're looking for someone with a blend of app development skills, cybersecurity expertise, and a deep understanding of software internals, I would love to connect and explore how we can work together.
+- **HTML5 & CSS3**: For structuring and styling the website.
+- **JavaScript**: For interactive elements, dynamic content, and the unique terminal feature.
+- **Material Icons**: For iconography and enhanced UI.
 
+## How to Use
 
+### Prerequisites
+
+To set up and run the website locally, you will need a basic understanding of HTML, CSS, and JavaScript. Alternatively, you can host it using any static site hosting platform like GitHub Pages.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/souravkaushik-dev/portfolio-website.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd portfolio-website
+   ```
+
+3. Open `index.html` in your preferred web browser to view the portfolio.
+
+### Deployment
+
+To deploy the portfolio on GitHub Pages:
+
+1. Push the repository to GitHub.
+2. Go to the repository settings on GitHub.
+3. Scroll down to the **GitHub Pages** section.
+4. Select the source branch (`main`) and `/root` directory.
+5. Your portfolio will be live at `https://your-username.github.io/portfolio-website`.
+
+## Upcoming Updates
+
+- **Project Blog**: I plan to add a blog section to detail my work, including technical write-ups, reverse engineering analysis, and development tips.
+- **New Projects**: Additional projects, including **DotPaper** (a new wallpaper app), will be featured soon.
+
+## Contact
+
+If you'd like to connect or discuss potential collaborations, feel free to reach out: 
+- **GitHub**: [github.com/souravkaushik-dev](https://github.com/souravkaushik-dev)
+
+---
+
+This version notes that the UI was inspired by **craftsmen.tech**. Let me know if you need further adjustments!
