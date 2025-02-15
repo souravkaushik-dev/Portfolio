@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Julius Guevarra">
+    <meta name="author" content="Souav Kaushik">
     <meta name="keywords"
-        content="Julius Guevarra, Gudo, front-end developer, graphic designer, ui/ux designer, interactive designer, portfolio, filipino designer, filipino developer">
+        content="Souav Kaushik, Gudo, front-end developer, graphic designer, ui/ux designer, interactive designer, portfolio, filipino designer, filipino developer">
     <meta name="description"
-        content="Julius Guevarra is a Front End Developer and UI/UX Designer based in the Philippines.">
+        content="Souav Kaushik is a Front End Developer and UI/UX Designer based in the Philippines.">
     <meta name="thumbnail" content="https://juliusguevarra.tk./assets/img/thumbnail_v2.jpg">
-    <title>Julius Guevarra | Portfolio</title>
+    <title>Souav Kaushik | Portfolio</title>
     <link id="app-fontawesome" rel="preload" as="style" href="css/all.min.css" onload="this.rel = 'stylesheet'">
-    <link href="images/favicon.b720d1c740ff8cbe0231a909bc30e4fc.png" rel="shortcut icon" type="image/x-icon"><noscript>
+    <link href="images/MY.png" rel="shortcut icon" type="image/x-icon"><noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     </noscript>
     <style id="preloader-style">
@@ -57,18 +57,18 @@
     </style>
     <meta property="fb:app_id" content="289912508261828">
     <meta property="og:locale" content="tl_PH">
-    <meta property="og:site_name" content="Julius Guevarra's Portfolio">
+    <meta property="og:site_name" content="Souav Kaushik's Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://juliusguevarra.tk/">
-    <meta property="og:title" content="Julius Guevarra – Creative Designer and Developer">
+    <meta property="og:title" content="Souav Kaushik – Creative Designer and Developer">
     <meta property="og:description"
-        content="Julius Guevarra is a Front End Developer and UI/UX Designer based in the Philippines. ">
+        content="Souav Kaushik is a Front End Developer and UI/UX Designer based in the Philippines. ">
     <meta property="og:image" content="https://juliusguevarra.tk./assets/img/thumbnail_v2.jpg">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://juliusguevarra.tk/">
-    <meta property="twitter:title" content="Julius Guevarra – Creative Designer and Developer">
+    <meta property="twitter:title" content="Souav Kaushik – Creative Designer and Developer">
     <meta property="twitter:description"
-        content="Julius Guevarra is a Front End Developer and UI/UX Designer based in the Philippines. ">
+        content="Souav Kaushik is a Front End Developer and UI/UX Designer based in the Philippines. ">
     <meta property="twitter:image" content="https://juliusguevarra.tk/assets/img/thumbnail_v2.jpg">
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -96,12 +96,25 @@
         </div>
     </noscript>
     <nav id="navigation">
-        <div id="navigation__logo"><a class="page__link" href="/" aria-label="Home Page"><svg class="light-svg"
-                    data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 355.12 355.12">
-                    <path
-                        d="M337.57,160.51H240.72V24.32a17.07,17.07,0,0,0-11.08-16l-.11,0c-.62-.19-1.24-.38-1.88-.55a167.52,167.52,0,0,0-21-4.84,177.07,177.07,0,0,0-92.25,9.25C52.92,35.7,7.83,92.56,1.33,160.51q-.83,8.41-.83,17t.83,17c8.59,89.67,84.34,160,176.23,160s167.64-70.34,176.23-160q.83-8.41.83-17A17,17,0,0,0,337.57,160.51Zm-18.5,37.38s0,.09,0,.13c-10,69.19-69.62,122.51-141.49,122.51-73.07,0-133.5-55.08-141.94-125.92a142.58,142.58,0,0,1,0-34.09A143.22,143.22,0,0,1,114.38,49.34a142.88,142.88,0,0,1,90.09-12.2,2.68,2.68,0,0,1,2.15,2.63V177.56a29.08,29.08,0,0,1-58.15,0v-.17a16.67,16.67,0,0,0-10.81-15.76,17.25,17.25,0,0,0-18.3,3.87,17.08,17.08,0,0,0-5,12.06,62.5,62.5,0,0,0,2.34,17,63.23,63.23,0,0,0,31.75,39,63,63,0,0,0,58.15,0,63.2,63.2,0,0,0,31.73-39h77.71a3.64,3.64,0,0,1,.68,0,2.76,2.76,0,0,1,2,1.34,2.69,2.69,0,0,1,.34,1.56A2.34,2.34,0,0,1,319.07,197.89Z">
-                    </path>
-                </svg></a></div>
+        <div id="navigation__logo">
+            <a class="page__link" href="/index.html" id="logoLink" aria-label="Home Page">
+                <img src="images/logoop.png" alt="Home Page Logo" style="width: 250px; height: auto;" />
+            </a>
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get the logo link by its ID
+                const logoLink = document.getElementById('logoLink');
+                
+                // Add event listener to force navigation when the logo is clicked
+                logoLink.addEventListener('click', function(event) {
+                    event.preventDefault();  // Prevent any default behavior
+                    window.location.href = 'index.html';  // Force navigation to index.html
+                });
+            });
+        </script>            
+        
         <div class="navigation__wrapper"><label class="navigation__button-label"
                 for="navigation-button">MENU</label><svg class="navigation__toggle" viewBox="15 15 70 70"
                 xmlns="http://www.w3.org/2000/svg">
@@ -111,47 +124,101 @@
             </svg></div>
     </nav>
     <nav id="navigation-main">
-        <div id="navigation__logo"><a class="page__link" href="/" aria-label="Home Page"><svg class="light-svg"
-                    data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 355.12 355.12">
-                    <path
-                        d="M337.57,160.51H240.72V24.32a17.07,17.07,0,0,0-11.08-16l-.11,0c-.62-.19-1.24-.38-1.88-.55a167.52,167.52,0,0,0-21-4.84,177.07,177.07,0,0,0-92.25,9.25C52.92,35.7,7.83,92.56,1.33,160.51q-.83,8.41-.83,17t.83,17c8.59,89.67,84.34,160,176.23,160s167.64-70.34,176.23-160q.83-8.41.83-17A17,17,0,0,0,337.57,160.51Zm-18.5,37.38s0,.09,0,.13c-10,69.19-69.62,122.51-141.49,122.51-73.07,0-133.5-55.08-141.94-125.92a142.58,142.58,0,0,1,0-34.09A143.22,143.22,0,0,1,114.38,49.34a142.88,142.88,0,0,1,90.09-12.2,2.68,2.68,0,0,1,2.15,2.63V177.56a29.08,29.08,0,0,1-58.15,0v-.17a16.67,16.67,0,0,0-10.81-15.76,17.25,17.25,0,0,0-18.3,3.87,17.08,17.08,0,0,0-5,12.06,62.5,62.5,0,0,0,2.34,17,63.23,63.23,0,0,0,31.75,39,63,63,0,0,0,58.15,0,63.2,63.2,0,0,0,31.73-39h77.71a3.64,3.64,0,0,1,.68,0,2.76,2.76,0,0,1,2,1.34,2.69,2.69,0,0,1,.34,1.56A2.34,2.34,0,0,1,319.07,197.89Z">
-                    </path>
-                </svg></a></div>
-        <div class="navigation__menu">
-            <ul class="navigation__menu-item">
-                <li><a class="navigation__menu-link page__link revealer-intro" href="about/about.html"
-                        data-rv_color="#fff">About</a></li>
-                <li><a class="navigation__menu-link page__link revealer-intro" href="index.html"
-                        data-rv_color="#fff">Works</a></li>
-                <li><a class="navigation__menu-link page__link revealer-intro" href="/contact"
-                        data-rv_color="#fff">Contact</a></li>
-            </ul>
+        <div id="navigation__logo">
+            <a class="page__link" href="index.html" aria-label="Home Page">
+                <!-- Replace 'images/logo.png' with the correct path to your logo image -->
+                <img src="images/logoop.png" alt="Home Page Logo" style="width: 250px; height: auto;" />
+            </a>
         </div>
+        
+                <div class="navigation__menu">
+                    <ul class="navigation__menu-item">
+                        <li>
+                            <a id="aboutLink" class="navigation__menu-link page__link revealer-intro" href="about/about.html" data-rv_color="#fff">About</a>
+                        </li>
+                
+                        <li>
+                            <a class="navigation__menu-link page__link revealer-intro" href="RESUME.pdf" data-rv_color="#fff">Resume</a>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        // Get the "About" link
+                        const aboutLink = document.querySelector('a[href="about.html"]');
+                
+                        // Force navigation to about.html
+                        if (aboutLink) {
+                            aboutLink.addEventListener('click', function(event) {
+                                event.preventDefault();  // Prevent default navigation behavior
+                                window.location.href = 'about/about.html';  // Navigate to about.html
+                            });
+                        }
+                
+                        // Get the "Resume" link
+                        const resumeLink = document.querySelector('a[href="RESUME.pdf"]');
+                
+                        // Force navigation to RESUME.pdf
+                        if (resumeLink) {
+                            resumeLink.addEventListener('click', function(event) {
+                                event.preventDefault();  // Prevent default navigation behavior
+                                window.location.href = 'images/RESUME.pdf';  // Navigate to RESUME.pdf
+                            });
+                        }
+                    });
+                </script>     
+                
     </nav>
-    <div class="navigation__overlay"><span></span><span></span><span></span><span></span>
+    <div class="navigation__overlay">
+        <span></span><span></span><span></span><span></span>
         <div class="navigation__items">
             <div class="navigation__container">
-                <div class="navigation__link-wrapper"><a class="navigation__link page__link" href="about/about.html">About</a>
+                <div class="navigation__link-wrapper">
+                    <a class="navigation__link page__link" href="about.html">About</a>
                 </div>
-                <div class="navigation__link-wrapper"><a class="navigation__link page__link" href="/works">Works</a>
-                </div>
-                <div class="navigation__link-wrapper"><a class="navigation__link page__link" href="/contact">Contact</a>
+                <div class="navigation__link-wrapper">
+                    <a class="navigation__link page__link" href="RESUME.pdf">Resume</a>
                 </div>
                 <div class="copyright-wrapper">
-                    <p class="copyright">© <span class="year"> </span>� Julius Guevarra</p>
+                    <p class="copyright">© <span class="year"> </span> Sourav Kaushik</p>
                 </div>
-                <div class="navigation__social-link"><a class="social-link" href="https://www.dribbble.com/jgudo"
-                        target="_blank" rel="noreferrer" title="Dribble" aria-label="Dribble"><i
-                            class="fab fa-dribbble"></i></a><a class="social-link" href="https://www.behance.net/jgudo"
-                        target="_blank" rel="noreferrer" title="Behance" aria-label="Behance"><i
-                            class="fab fa-behance"></i></a><a class="social-link" href="https://www.github.com/jgudo"
-                        target="_blank" rel="noreferrer" title="Github" aria-label="Github"><i
-                            class="fab fa-github"></i></a><a class="social-link" href="https://codepen.io/jgudo/"
-                        target="_blank" rel="noreferrer" title="CodePen" aria-label="CodePen"><i
-                            class="fab fa-codepen"></i></a></div>
+                <div class="navigation__social-link">
+                    <a class="social-link" href="https://www.linkedin.com/in/sourav-kaushik-5597bb271/" target="_blank" rel="noreferrer" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                    <a class="social-link" href="https://github.com/souravkaushik-dev" target="_blank" rel="noreferrer" title="GitHub" aria-label="Github">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the "About" link
+            const aboutLink = document.querySelector('a[href="about.html"]');
+    
+            // Force navigation to about.html
+            if (aboutLink) {
+                aboutLink.addEventListener('click', function(event) {
+                    event.preventDefault();  // Prevent default navigation behavior
+                    window.location.href = 'about/about.html';  // Navigate to about.html
+                });
+            }
+    
+            // Get the "Resume" link
+            const resumeLink = document.querySelector('a[href="RESUME.pdf"]');
+    
+            // Force navigation to RESUME.pdf
+            if (resumeLink) {
+                resumeLink.addEventListener('click', function(event) {
+                    event.preventDefault();  // Prevent default navigation behavior
+                    window.location.href = 'images/RESUME.pdf';  // Navigate to RESUME.pdf
+                });
+            }
+        });
+    </script>       
     <div id="curtain"></div>
     <div id="sw__message"><span>Newer version of the site is available</span><button id="sw__button"><span
                 class="button-text">UPDATE</span></button></div>
@@ -169,7 +236,7 @@
                 style="width: 100%; transform: translateY(-40px); z-index: 1; overflow: hidden; height: 60px; display: flex; justify-content: center; align-items: center;">
                 <h6 id="preloader__name"
                     style="font-family: 'Circular Std Bold', Helvetica, Arial, sans-serif; color: #fff; letter-spacing: 1rem; transition: all 1s cubic-bezier(.77,0,.175,1); animation: scale 1.5s cubic-bezier(.77,0,.175,1)">
-                    JULIUS GUEVARRA</h6>
+                    Souav Kaushik</h6>
             </div>
             <div id="preloader__progress"
                 style="position: absolute; top: 0; bottom: 0; margin: auto; width: 150px; height: 1px; transition: width 1s cubic-bezier(.77,0,.175,1)">
@@ -182,7 +249,7 @@
     </div>
     <main id="main">
         <div class="page-container">
-            <div id="content" data-id="about" data-title="About | Julius Guevarra" data-bg="dark">
+            <div id="content" data-id="about" data-title="About | Souav Kaushik" data-bg="dark">
                 <div class="about">
                     <div class="about__details">
                         <div class="about__title-wrapper about__details-container">
@@ -191,12 +258,9 @@
                                     <h6 class="revealer">ABOUT</h6>
                                 </div>
                                 <div class="intro-title">
-                                    <h2 class="revealer">I am a passionate <span class="text-bold">front-end developer
-                                        </span>and <span class="text-bold">ui/ux designer </span>with a keen eye for
-                                        details. </h2>
+                                    <h2 class="revealer">I’m Sourav Kaushik, passionate about tech,<span class="text-bold">cybersecurity, and Flutter development. As a CEH and BCA student, I’m always eager to learn, improve, and create impactful solutions.
+                                        </span>and <span class="text-bold">I love coding, problem-solving,  </span>and staying fit, driven by the goal of continuous growth. </h2>
                                 </div>
-                                <div class="about-image revealer" data-cv_direction="lr"><img
-                                        src="images/gudo.49f8b1b9bc698f69095776e63c4ef1dc.jpg"></div>
                             </div>
                         </div>
                         <div class="about__details-container">
@@ -204,31 +268,12 @@
                                 <div class="intro-wrapper__order"><span class="order revealer">/ 01</span><span
                                         class="order-title revealer">Story </span></div>
                                 <div class="intro-wrapper__content">
-                                    <h5 class="revealer">A story of hardwork and perseverance.</h5><br>
-                                    <p class="about__me revealer" data-rv_color="none">Hi! I'm Julius Guevarra. I have a
-                                        strong passion for design and technology.
-                                        I specialize in Front End Development and UI/UX Design and my passion is all
-                                        about building elegant and
-                                        professional user interfaces and websites. I also do branding and identity
-                                        design such as logo design,
-                                        letterhead and business card, along with photo editing, image cropping and other
-                                        graphic design services.<br><br>I live in the Philippines. I am a graduate of
-                                        Information Technology from Don Honorio Ventura State University.
-                                        I started drawing and designing from a young age and most of my design skills
-                                        and knowledge are self-taught.
-                                        I got into programming when I was introduced to web programming during high
-                                        school. It fascinated me and it hooked me on,
-                                        so I decided to pursue this career. Even though I took the path of becoming a
-                                        programmer, my strong and innate talent in arts
-                                        and design persisted. Consequently, I taught myself about multimedia design.
-                                        Combining the state of the art and my
-                                        programming knowledge, I am able to build a professional and interactive
-                                        websites.<br><br>I will not stick around on just doing Front End development
-                                        projects. My goal is to take it to the next level of becoming a Full Stack
-                                        Developer and become one of the world's top designers, so now, I am working
-                                        towards it. I have prepared myself to accept the
-                                        challenges into this ever changing world and I will try my very best to achieve
-                                        my dreams and goals.</p>
+                                    <h5 class="revealer">A journey of dedication and resilience.</h5><br>
+                                    <p class="about__me revealer" data-rv_color="none">A story of hard work and perseverance is one that defines my journey. Every challenge I face is an opportunity to learn, grow, and improve. Whether it’s mastering the complexities of Flutter development or understanding cybersecurity as a CEH, I stay committed to putting in the effort required to achieve my goals. My passion for technology pushes me to constantly evolve and never settle for less than my best.
+
+                                        Throughout my academic journey in BCA and my professional ventures, I’ve learned that success doesn’t come easy. It requires persistence, the willingness to overcome obstacles, and a mindset focused on continuous improvement. From long hours of coding to tackling difficult problems, I believe that each step forward, no matter how small, adds value to my growth. My experiences have taught me the importance of staying consistent and believing in the process.
+                                        
+                                        Beyond tech, I carry this same spirit into other aspects of my life, like fitness and personal development. Just like coding or learning a new concept, progress takes time, and perseverance is key. Whether I’m working on a project or striving to maintain a healthy lifestyle, I believe in giving my all, knowing that the effort I put in today will lead to success tomorrow.</p>
                                 </div>
                             </div>
                         </div>
@@ -239,26 +284,26 @@
                                         <h2>Interaction Design</h2>
                                     </div>
                                     <div class="about-marquee__text">
-                                        <h2>Interface Design</h2>
+                                        <h2>Passionate</h2>
                                     </div>
                                     <div class="about-marquee__text">
-                                        <h2>User Experience</h2>
+                                        <h2>dedicated</h2>
                                     </div>
                                 </div>
                             </div>
                             <div class="about-marquee" id="about-marquee--second">
                                 <div class="about-marquee__wrapper">
                                     <div class="about-marquee__text">
-                                        <h2>Prototyping</h2>
+                                        <h2>Flutter developer</h2>
                                     </div>
                                     <div class="about-marquee__text">
-                                        <h2>Front End</h2>
+                                        <h2>ethical hacker</h2>
                                     </div>
                                     <div class="about-marquee__text">
-                                        <h2>Branding</h2>
+                                        <h2>resilient</h2>
                                     </div>
                                     <div class="about-marquee__text">
-                                        <h2>Identity Design</h2>
+                                        <h2>learner</h2>
                                     </div>
                                 </div>
                             </div>
@@ -270,12 +315,6 @@
                                     <div class="about-marquee__text">
                                         <h2>User Research</h2>
                                     </div>
-                                    <div class="about-marquee__text">
-                                        <h2>Art Direction</h2>
-                                    </div>
-                                    <div class="about-marquee__text">
-                                        <h2>Illustration</h2>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -284,22 +323,8 @@
                                 <div class="intro-wrapper__order"><span class="order revealer">/ 02</span><span
                                         class="order-title revealer">The Process </span></div>
                                 <div class="intro-wrapper__content">
-                                    <h5 class="revealer">How i work.</h5><br>
-                                    <p class="revealer" data-rv_color="none">When I start working on a project, I try to
-                                        get all the information and data from my client that are relevant to the project
-                                        such as goals, demographics and preferred aesthetics.
-                                        After this, I start doing the research about the industry, competition, trends
-                                        and other factors that are necessary for the development of the project.
-                                        After I have all the data that I need, my next step is to work on the wireframe
-                                        and prototype using tools such as Adobe XD and Figma.
-                                        After the prototype is finished and the wireframes are finalized and approved,
-                                        this is where I start doing the visual designs using various tools such as Adobe
-                                        Photoshop for processing images,
-                                        Adobe Illustrator for creating vector graphics, and Adobe XD for building the
-                                        actual visual design. After the visual designs are approved, I start on coding
-                                        and transforming the designs into
-                                        actual code using a wide range of technologies such as HTML, CSS and JavaScript
-                                        with best practices in mind.</p>
+                                    <h5 class="revealer">my approach to work</h5><br>
+                                    <p class="revealer" data-rv_color="none">My approach to work starts with carefully thinking and designing the app on paper. I outline all its features in a notebook, ensuring every detail is considered before moving to development. I then use Android Studio to build the app and bring it to life. For a smooth, bug-free experience and to refine the UI, I rely on tools like ChatGPT and Gemini to enhance the overall quality and user experience.</p>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +333,7 @@
                                 <div class="intro-wrapper__order"><span class="order revealer">/ 03</span><span
                                         class="order-title revealer">The Tools </span></div>
                                 <div class="intro-wrapper__content">
-                                    <h5 class="revealer">What i use.</h5><br>
+                                    <h5 class="revealer">the tools I rely on</h5><br>
                                     <p class="revealer" data-rv_color="none">I use a number of tools that make design
                                         and development much easier. I usually use Adobe XD or Figma interchangeably for
                                         doing all the
@@ -325,39 +350,20 @@
                                                 <div class="tools-column-item revealer" data-rv_color="none">
                                                     <p>Figma</p>
                                                     <p>Adobe Photoshop</p>
-                                                    <p>Adobe Illustrator</p>
-                                                    <p>Adobe InDesign</p>
-                                                    <p>Adobe XD</p>
-                                                    <p>Adobe After Effects</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="tools-development">
-                                            <h6 class="revealer">Web Development</h6>
+                                            <h6 class="revealer">technologies and frameworks I work with</h6>
                                             <div class="tools-column">
                                                 <div class="tools-column-item revealer" data-rv_color="none">
-                                                    <p>HTML 5</p>
-                                                    <p>CSS 3</p>
-                                                    <p>JavaScript</p>
-                                                    <p>TypeScript</p>
-                                                    <p>React JS</p>
-                                                    <p>Node JS</p>
-                                                </div>
-                                                <div class="tools-column-item revealer" data-rv_color="none">
-                                                    <p>Express JS</p>
-                                                    <p>React Native</p>
-                                                    <p>Redux</p>
-                                                    <p>Firebase</p>
-                                                    <p>GraphQL</p>
-                                                    <p>MongoDB</p>
-                                                </div>
-                                                <div class="tools-column-item revealer" data-rv_color="none">
-                                                    <p>Git</p>
-                                                    <p>NPM</p>
-                                                    <p>Yarn</p>
-                                                    <p>Gulp</p>
-                                                    <p>Grunt</p>
-                                                    <p>Webpack</p>
+                                                    <p>Flutter</p>
+                                                    <p>Andoid Studio</p>
+                                                    <p>V Code</p>
+                                                    <p>X-Code</p>
+                                                    <p>Chat-Gpt</p>
+                                                    <p>Gemini</p>
+                                                    <p>Dart</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -373,21 +379,16 @@
                                     <h5 class="revealer">Social.</h5><br>
                                     <p class="revealer" data-rv_color="none"><a
                                             class="about__contacts-social external-link"
-                                            href="https://www.linkedin.com/in/juliusgudo/" target="_blank"
-                                            rel="noreferrer" aria-label="LinkedIn">LinkedIn</a>/ ��<a
+                                            href="https://www.linkedin.com/in/sourav-kaushik-5597bb271/" target="_blank"
+                                            rel="noreferrer" aria-label="LinkedIn">LinkedIn</a> | <a
+                                        
                                             class="about__contacts-social external-link"
-                                            href="https://www.instagram.com/jgudoo" target="_blank" rel="noreferrer"
-                                            aria-label="Instagram">Instagram</a>/ ��<a
-                                            class="about__contacts-social external-link"
-                                            href="https://www.twitter.com/jgudoo" target="_blank" rel="noreferrer"
-                                            aria-label="Twitter">Twitter</a>/ ��<a
-                                            class="about__contacts-social external-link"
-                                            href="https://www.facebook.com/julius_gudo14" target="_blank"
-                                            rel="noreferrer" aria-label="Facebook">Facebook </a></p><br><br>
+                                            href="hhttps://github.com/souravkaushik-dev" target="_blank"
+                                            rel="noreferrer" aria-label="github">Github </a></p><br><br>
                                     <h5 class="revealer">Email.</h5><br>
                                     <p class="revealer"><a class="about__contacts-social external-link"
                                             href="mailto:juliusguevarra101@gmail.com"
-                                            target="_blank">juliusguevarra101@gmail.com</a></p>
+                                            target="_blank">souravkaushik0.0@gmail.com</a></p>
                                 </div>
                             </div><br>
                         </div>
@@ -406,11 +407,11 @@
                                         .circ3 {
                                             fill: none;
                                         }
-
+    
                                         .circ2 {
                                             clip-path: url(index.html#clip-path);
                                         }
-
+    
                                         .circ3 {
                                             stroke: #fff;
                                             stroke-miterlimit: 10;
@@ -456,62 +457,48 @@
                                 </g>
                             </svg>
                             <h1 class="revealer" data-rv_duration="0" data-rv_color="none">Let's work together.</h1><br>
-                            <p class="revealer" data-rv_duration="0" data-rv_color="none">I'm available for freelance
-                                work.</p><br><br>
+                            <p class="revealer" data-rv_duration="0" data-rv_color="none">I’m ready to be hired and collaborate with a dynamic team.
+                            </p><br><br>
                             <div class="revealer revealer-overflow" data-rv_duration="0" data-rv_color="none"><a
                                     class="page__link link__decor link__decor--dark link__decor--bg link"
-                                    href="/contact.html"><span class="link-text">SAY HELLO</span><span
+                                    ><span class="link-text">Grateful for stopping by!</span><span
                                         class="line"></span></a></div>
                         </div>
                     </section><a class="link__decor scroll-top--light" id="scroll-top" href="">
                         <span class="link-text sub-caps">TOP</span>
                         <span class="line"></span>
                     </a>
-                    <footer class="footer">
-                        <div class="footer__wrapper">
-                            <div class="footer__content">
-                                <div class="footer__copyright">
-                                    <p>� <span class="year"> </span>� Julius Guevarra</p>
-                                </div>
-                                <div class="footer__links"><a class="social-link footer__social-icons"
-                                        href="https://www.dribbble.com/jgudo" target="_blank" rel="noreferrer"
-                                        title="Dribbble" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a><a
-                                        class="social-link footer__social-icons" href="https://www.behance.net/jgudo"
-                                        target="_blank" rel="noreferrer" title="Behance" aria-label="Behance"><i
-                                            class="fab fa-behance"></i></a><a class="social-link footer__social-icons"
-                                        href="https://www.github/jgudo" target="_blank" rel="noreferrer" title="GitHub"
-                                        aria-label="GitHub"><i class="fab fa-github"></i></a><a
-                                        class="social-link footer__social-icons" href="https://codepen.io/jgudo/"
-                                        target="_blank" rel="noreferrer" title="CodePen" aria-label="CodePen"><i
-                                            class="fab fa-codepen"></i></a><a class="social-link footer__social-icons"
-                                        href="https://www.linkedin.com/in/juliusgudo/" target="_blank" rel="noreferrer"
-                                        title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a><a
-                                        class="social-link footer__social-icons" href="https://www.instagram.com/jgudoo"
-                                        target="_blank" rel="noreferrer" title="Instagram" aria-label="Instagram"><i
-                                            class="fab fa-instagram"></i></a><a class="social-link footer__social-icons"
-                                        href="https://www.facebook.com/julius.gudo14" target="_blank" rel="noreferrer"
-                                        title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"> </i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer><svg id="circ" viewBox="0 0 187 187">
-                        <defs></defs>
-                        <style>
-                            .circ {
-                                fill: none;
-                                stroke: #fff;
-                                stroke-miterlimit: 10;
-                            }
-                        </style>
-                        <circle class="circ" cx="93.5" cy="93.5" r="93"> </circle>
-                    </svg>
                 </div>
+                <footer class="footer">
+                    <div class="footer__wrapper">
+                        <div class="footer__content">
+                            <div class="footer__copyright">
+                                <p><span class="year"> </span> | Sourav Kaushik</p>
+                            </div>
+                            <div class="footer__links"><a class="social-link footer__social-icons"
+                                   <a class="social-link footer__social-icons"
+                                    href="https://github.com/souravkaushik-dev" target="_blank" rel="noreferrer" title="GitHub"
+                                    aria-label="GitHub"><i class="fab fa-github"></i></a><a class="social-link footer__social-icons"
+                                    href="https://www.linkedin.com/in/sourav-kaushik-5597bb271/" target="_blank" rel="noreferrer"
+                                    title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></div>
+                        </div>
+                    </div>
+                </footer><svg id="circ" viewBox="0 0 187 187">
+                    <defs></defs>
+                    <style>
+                        .circ {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-miterlimit: 10;
+                        }
+                    </style>
+                    <circle class="circ" cx="93.5" cy="93.5" r="93"></circle>
+                </svg>
             </div>
-        </div>
-    </main>
-    <script type="text/javascript" src="js/runtime.795598ba.bundle.js"></script>
-    <script type="text/javascript" src="js/vendors.00c801b5.chunk.js"></script>
-    <script type="text/javascript" src="js/main.212c992b.chunk.js"></script>
-</body>
-
-</html>
+        </main>
+        <script type="text/javascript" src="js/runtime.795598ba.bundle.js"></script>
+        <script type="text/javascript" src="js/vendors.00c801b5.chunk.js"></script>
+        <script type="text/javascript" src="js/main.212c992b.chunk.js"></script>
+    </body>
+    
+    </html>
