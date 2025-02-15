@@ -95,7 +95,7 @@ Whether it’s building apps, diving into security challenges, or simply connect
 
 - **LinkedIn**: [Sourav Kaushik](https://www.linkedin.com/in/sourav-kaushik-5597bb271/)
 - **GitHub**: [souravkaushik-dev](https://github.com/souravkaushik-dev)
-- **Email**: sourav@example.com
+- **Email**: souravkaushik0.0@gmail.com
 
 If you’ve made it this far, thank you for stopping by! Let’s build something **awesome together**. 💡🚀
 
