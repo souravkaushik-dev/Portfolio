@@ -97,11 +97,28 @@
     </noscript>
     <nav id="navigation">
         <div id="navigation__logo">
-            <a class="page__link" href="index.html" aria-label="Home Page">
+            <a id="logoLink" class="page__link" href="index.html" aria-label="Home Page">
                 <!-- Adjust the width and height values to control the size -->
                 <img src="images/logoop.png" alt="Home Page Logo" style="width: 250px; height: auto;" />
             </a>
-        </div>        
+        </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Get the logo link element by its ID
+                const logoLink = document.getElementById('logoLink');
+        
+                // Check if the logo link exists
+                if (logoLink) {
+                    logoLink.addEventListener('click', function(event) {
+                        event.preventDefault();  // Prevent the default navigation behavior
+                        window.location.href = 'index.html';  // Force navigation to index.html
+                    });
+                }
+            });
+        </script>
+        
+        
         
         <div class="navigation__wrapper"><label class="navigation__button-label"
                 for="navigation-button">MENU</label><svg class="navigation__toggle" viewBox="15 15 70 70"
@@ -113,11 +130,29 @@
     </nav>
     <nav id="navigation-main">
         <div id="navigation__logo">
-            <a class="page__link" href="index.html" aria-label="Home Page">
-                <!-- Replace 'images/logo.png' with the correct path to your logo image -->
+            <a id="logoLink" class="page__link" href="index.html" aria-label="Home Page">
+                <!-- Adjust the width and height values to control the size -->
                 <img src="images/logoop.png" alt="Home Page Logo" style="width: 250px; height: auto;" />
             </a>
         </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Get the logo link element by its ID
+                const logoLink = document.getElementById('logoLink');
+        
+                // Check if the logo link exists
+                if (logoLink) {
+                    logoLink.addEventListener('click', function(event) {
+                        event.preventDefault();  // Prevent the default navigation behavior
+                        window.location.href = 'index.html';  // Force navigation to index.html
+                    });
+                }
+            });
+        </script>
+        
+        
+        
         
                 <div class="navigation__menu">
                     <ul class="navigation__menu-item">
@@ -303,8 +338,9 @@ mask="url(#mask)"></image>
                         </div>
                     </div>
                     <div class="work__item js-scroll-monitor">
-                        <div class="work__thumb-fixed"><img class="work__thumb-fixed-img"
-                                src="images/DOTTUNES.webp"></div>
+                        <div class="work__thumb-fixed">
+                            <img class="work__thumb-fixed-img" src="images/DOTTUNES.webp">
+                        </div>
                         <div class="work__item-con js-reveal">
                             <div class="work__item-wrapper">
                                 <div class="line"></div>
@@ -318,26 +354,28 @@ mask="url(#mask)"></image>
                                     </div>
                                 </div>
                             </div>
-                            <div class="work__item-thumbnail"><svg class="thumbnail" viewBox="0 0 430 300" width="100%"
-                                    height="100%" preserveAspectRatio="none">
+                            <div class="work__item-thumbnail">
+                                <svg class="thumbnail" viewBox="0 0 430 300" width="100%" height="100%" preserveAspectRatio="none">
                                     <defs>
                                         <mask id="maskThumbnail">
-                                            <polygon points="430, 300 0, 270 0, 30 430, 0 430, 300" fill="#fff"
-                                                width="100%" height="100%"></polygon>
+                                            <polygon points="430, 300 0, 270 0, 30 430, 0 430, 300" fill="#fff" width="100%" height="100%"></polygon>
                                         </mask>
                                     </defs>
-                                    <image xlink:href="images/DOTTUNES.webp"
-                                        mask="url(#maskThumbnail)" preserveAspectRatio="none"></image>
+                                    <image xlink:href="images/DOTTUNES.webp" mask="url(#maskThumbnail)" preserveAspectRatio="none"></image>
                                 </svg>
                                 <div class="work__item-thumbnail-bg" style="background:#e0f1f7"></div>
-                            </div><a class="page__link link__decor link__decor--bg link work__item-link"
-                                href="/projects/booz"><span class="link-text">VIEW PROJECT</span><span
-                                    class="line"></span></a>
+                            </div>
+                            <a id="dottunesLink" class="page__link link__decor link__decor--bg link work__item-link" href="dotpaper/index.html">
+                                <span class="link-text">VIEW PROJECT</span>
+                                <span class="line"></span>
+                            </a>
                         </div>
                     </div>
+                    
                     <div class="work__item js-scroll-monitor">
-                        <div class="work__thumb-fixed"><img class="work__thumb-fixed-img"
-                                src="images/dotpaper.webp"></div>
+                        <div class="work__thumb-fixed">
+                            <img class="work__thumb-fixed-img" src="images/dotpaper.webp">
+                        </div>
                         <div class="work__item-con js-reveal">
                             <div class="work__item-wrapper">
                                 <div class="line"></div>
@@ -351,26 +389,28 @@ mask="url(#mask)"></image>
                                     </div>
                                 </div>
                             </div>
-                            <div class="work__item-thumbnail"><svg class="thumbnail" viewBox="0 0 430 300" width="100%"
-                                    height="100%" preserveAspectRatio="none">
+                            <div class="work__item-thumbnail">
+                                <svg class="thumbnail" viewBox="0 0 430 300" width="100%" height="100%" preserveAspectRatio="none">
                                     <defs>
                                         <mask id="maskThumbnail">
-                                            <polygon points="430, 300 0, 270 0, 30 430, 0 430, 300" fill="#fff"
-                                                width="100%" height="100%"></polygon>
+                                            <polygon points="430, 300 0, 270 0, 30 430, 0 430, 300" fill="#fff" width="100%" height="100%"></polygon>
                                         </mask>
                                     </defs>
-                                    <image xlink:href="images/dotpaper.webp"
-                                        mask="url(#maskThumbnail)" preserveAspectRatio="none"></image>
+                                    <image xlink:href="images/dotpaper.webp" mask="url(#maskThumbnail)" preserveAspectRatio="none"></image>
                                 </svg>
                                 <div class="work__item-thumbnail-bg" style="background:#e0f1f7"></div>
-                            </div><a class="page__link link__decor link__decor--bg link work__item-link"
-                                href="/projects/booz"><span class="link-text">VIEW PROJECT</span><span
-                                    class="line"></span></a>
+                            </div>
+                            <a id="dotpaperLink" class="page__link link__decor link__decor--bg link work__item-link" href="/projects/booz">
+                                <span class="link-text">VIEW PROJECT</span>
+                                <span class="line"></span>
+                            </a>
                         </div>
                     </div>
+                    
                     <div class="work__item js-scroll-monitor">
-                        <div class="work__thumb-fixed"><img class="work__thumb-fixed-img"
-                                src="images/Capture.PNG"></div>
+                        <div class="work__thumb-fixed">
+                            <img class="work__thumb-fixed-img" src="images/Capture.PNG">
+                        </div>
                         <div class="work__item-con js-reveal">
                             <div class="work__item-wrapper">
                                 <div class="line"></div>
@@ -384,23 +424,54 @@ mask="url(#mask)"></image>
                                     </div>
                                 </div>
                             </div>
-                            <div class="work__item-thumbnail"><svg class="thumbnail" viewBox="0 0 430 300" width="100%"
-                                    height="100%" preserveAspectRatio="none">
+                            <div class="work__item-thumbnail">
+                                <svg class="thumbnail" viewBox="0 0 430 300" width="100%" height="100%" preserveAspectRatio="none">
                                     <defs>
                                         <mask id="maskThumbnail">
-                                            <polygon points="430, 300 0, 270 0, 30 430, 0 430, 300" fill="#fff"
-                                                width="100%" height="100%"></polygon>
+                                            <polygon points="430, 300 0, 270 0, 30 430, 0 430, 300" fill="#fff" width="100%" height="100%"></polygon>
                                         </mask>
                                     </defs>
-                                    <image xlink:href="images/Capture.PNG"
-                                        mask="url(#maskThumbnail)" preserveAspectRatio="none"></image>
+                                    <image xlink:href="images/Capture.PNG" mask="url(#maskThumbnail)" preserveAspectRatio="none"></image>
                                 </svg>
                                 <div class="work__item-thumbnail-bg" style="background:#e0f1f7"></div>
-                            </div><a class="page__link link__decor link__decor--bg link work__item-link"
-                                href="/projects/booz"><span class="link-text">VIEW PROJECT</span><span
-                                    class="line"></span></a>
+                            </div>
+                            <a id="seginDoomwareLink" class="page__link link__decor link__decor--bg link work__item-link" href="/projects/booz">
+                                <span class="link-text">VIEW PROJECT</span>
+                                <span class="line"></span>
+                            </a>
                         </div>
                     </div>
+                    
+                    <!-- JavaScript to force navigation on click -->
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const dottunesLink = document.getElementById('dottunesLink');
+                            const dotpaperLink = document.getElementById('dotpaperLink');
+                            const seginDoomwareLink = document.getElementById('seginDoomwareLink');
+                    
+                            // Force navigation for each project link
+                            if (dottunesLink) {
+                                dottunesLink.addEventListener('click', function(event) {
+                                    event.preventDefault();
+                                    window.location.href = 'dotpaper/index.html';  // Navigate to Dottunes project
+                                });
+                            }
+                    
+                            if (dotpaperLink) {
+                                dotpaperLink.addEventListener('click', function(event) {
+                                    event.preventDefault();
+                                    window.location.href = '/projects/booz';  // Navigate to Dotpaper project
+                                });
+                            }
+                    
+                            if (seginDoomwareLink) {
+                                seginDoomwareLink.addEventListener('click', function(event) {
+                                    event.preventDefault();
+                                    window.location.href = '/projects/booz';  // Navigate to Segin-Doomware project
+                                });
+                            }
+                        });
+                    </script>                    
                 </section><!--<div class="footer__scroll-button">
 <a class="link__decor" id="scroll-top" href="">
 <span class="link-text sub-caps">TOP</span>
