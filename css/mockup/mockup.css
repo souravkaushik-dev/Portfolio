@@ -1,0 +1,346 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#f5f5f5;
+  color:#111;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* BACKGROUND */
+
+.bg-grid{
+  position:fixed;
+  inset:0;
+  background-image:
+  linear-gradient(
+    rgba(0,0,0,.02) 1px,
+    transparent 1px
+  ),
+  linear-gradient(
+    90deg,
+    rgba(0,0,0,.02) 1px,
+    transparent 1px
+  );
+
+  background-size:40px 40px;
+
+  z-index:-10;
+}
+
+.blur{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(120px);
+  z-index:-5;
+}
+
+.blur-1{
+  width:320px;
+  height:320px;
+  background:#ff6b00;
+  opacity:.14;
+  top:-80px;
+  right:-80px;
+}
+
+.blur-2{
+  width:260px;
+  height:260px;
+  background:#ff9d4d;
+  opacity:.10;
+  bottom:-50px;
+  left:-50px;
+}
+
+/* SHOWCASE */
+
+.app-page{
+  min-height:500vh;
+}
+
+.showcase-wrapper{
+  display:flex;
+  gap:100px;
+  padding:120px 8%;
+}
+
+/* PHONE */
+
+.sticky-phone{
+  width:42%;
+  position:sticky;
+  top:60px;
+  height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.phone-frame{
+  width:360px;
+  height:760px;
+
+  padding:16px;
+
+  border-radius:48px;
+
+  background:#111;
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,.15);
+}
+
+.phone-display{
+  width:100%;
+  height:100%;
+
+  border-radius:36px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  background:white;
+}
+
+.phone-slide{
+  position:absolute;
+  inset:0;
+
+  opacity:0;
+
+  transform:
+  translateY(120px)
+  scale(.92);
+
+  transition:
+  opacity .9s ease,
+  transform .9s cubic-bezier(.22,1,.36,1);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.active-slide{
+  opacity:1;
+
+  transform:
+  translateY(0)
+  scale(1);
+}
+
+.phone-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* CONTENT */
+
+.scroll-sections{
+  flex:1;
+}
+
+.scroll-section{
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.scroll-section span{
+  color:#ff6b00;
+
+  font-size:14px;
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  margin-bottom:20px;
+}
+
+.scroll-section h1{
+  font-size:120px;
+
+  line-height:.85;
+
+  font-family:'Bebas Neue',sans-serif;
+
+  margin-bottom:26px;
+}
+
+.scroll-section p{
+  max-width:620px;
+
+  color:#666;
+
+  line-height:2;
+
+  font-size:18px;
+}
+
+/* FLOATING EFFECT */
+
+.phone-frame{
+  animation:
+  floating 6s ease-in-out infinite;
+}
+
+@keyframes floating{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-14px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* SMOOTH FADE */
+
+.scroll-section{
+  opacity:.35;
+
+  transform:
+  translateY(40px);
+
+  transition:
+  opacity .7s ease,
+  transform .7s ease;
+}
+
+.scroll-section:hover{
+  opacity:1;
+}
+
+.scroll-section.active-text{
+  opacity:1;
+
+  transform:
+  translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+  .showcase-wrapper{
+    flex-direction:column;
+    gap:60px;
+    padding-top:100px;
+  }
+
+  .sticky-phone{
+    width:100%;
+    position:relative;
+    height:auto;
+  }
+
+  .phone-frame{
+    width:100%;
+    max-width:360px;
+    height:740px;
+  }
+
+  .scroll-section h1{
+    font-size:72px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .showcase-wrapper{
+    padding:80px 6%;
+  }
+
+  .phone-frame{
+    height:680px;
+  }
+
+  .scroll-section h1{
+    font-size:58px;
+  }
+
+  .scroll-section p{
+    font-size:16px;
+  }
+
+}
+
+.app-top-info{
+  margin-bottom:120px;
+}
+
+.app-label{
+  color:#ff5b1f;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.app-main-title{
+  font-size:150px;
+  line-height:.85;
+  margin-top:16px;
+  font-family:'Bebas Neue',sans-serif;
+}
+
+.app-main-description{
+  max-width:620px;
+  margin-top:24px;
+  color:#666;
+  line-height:2;
+  font-size:18px;
+}
+
+.download-row{
+  margin-top:34px;
+}
+
+.playstore-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+
+  background:#ff5b1f;
+  color:white;
+
+  text-decoration:none;
+
+  padding:18px 30px;
+
+  border-radius:24px;
+
+  font-weight:600;
+
+  transition:.4s ease;
+
+  box-shadow:
+  0 10px 30px rgba(255,91,31,.25);
+}
+
+.playstore-btn:hover{
+  transform:
+  translateY(-6px)
+  scale(1.02);
+
+  box-shadow:
+  0 20px 40px rgba(255,91,31,.35);
+}

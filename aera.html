@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Elunae Showcase
+  </title>
+
+  <!-- FONTS -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="css/mockup/mockup.css"
+  />
+
+</head>
+
+<body class="app-page">
+
+  <!-- BACKGROUND -->
+
+  <div class="bg-grid"></div>
+
+  <div class="blur blur-1"></div>
+
+  <div class="blur blur-2"></div>
+
+  <!-- SHOWCASE -->
+
+  <div class="showcase-wrapper">
+
+    <!-- PHONE -->
+
+    <div class="sticky-phone">
+
+      <div class="phone-frame">
+
+        <div class="phone-display">
+
+          <!-- SCREEN 1 -->
+
+          <div class="phone-slide active-slide">
+
+            <img
+              src="images/home.png"
+              class="phone-image"
+            />
+
+          </div>
+
+          <!-- SCREEN 2 -->
+
+          <div class="phone-slide">
+
+            <img
+              src="images/search.png"
+              class="phone-image"
+            />
+
+          </div>
+
+          <!-- SCREEN 3 -->
+
+          <div class="phone-slide">
+
+            <img
+              src="images/settings.png"
+              class="phone-image"
+            />
+
+          </div>
+
+          <!-- SCREEN 4 -->
+
+          <div class="phone-slide">
+
+            <img
+              src="images/library.png"
+              class="phone-image"
+            />
+
+          </div>
+
+          <!-- SCREEN 5 -->
+
+          <div class="phone-slide">
+
+            <img
+              src="images/player.png"
+              class="phone-image"
+            />
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="scroll-sections">
+
+      <!-- APP INFO -->
+
+      <div class="app-top-info">
+
+        <span class="app-label">
+          MUSIC EXPERIENCE
+        </span>
+
+        <h1 class="app-main-title">
+          ELUNAE
+        </h1>
+
+        <p class="app-main-description">
+
+          Minimal music streaming
+          experience crafted with
+          immersive audio interaction,
+          elegant typography and
+          premium modern UI.
+
+        </p>
+
+        <div class="download-row">
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.studios.elunae&hl=en&pli=1"
+            target="_blank"
+            class="playstore-btn"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+
+              <path d="M14.222 7.386c.089.06.089.168 0 .228l-10.44 7.07c-.09.06-.198.008-.198-.104V.42c0-.112.108-.164.198-.104l10.44 7.07z"/>
+
+            </svg>
+
+            Download on Play Store
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- SECTION 1 -->
+
+      <section class="scroll-section active-text">
+
+        <span>
+          01
+        </span>
+
+        <h1>
+          Minimal Audio Space
+        </h1>
+
+        <p>
+
+          Elegant music home experience
+          designed with immersive spacing,
+          premium visual hierarchy and
+          smooth interaction systems.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 2 -->
+
+      <section class="scroll-section">
+
+        <span>
+          02
+        </span>
+
+        <h1>
+          Smart Search
+        </h1>
+
+        <p>
+
+          Fast and fluid music searching
+          experience with modern suggestions,
+          clean layouts and smooth transitions.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 3 -->
+
+      <section class="scroll-section">
+
+        <span>
+          03
+        </span>
+
+        <h1>
+          Clean Settings
+        </h1>
+
+        <p>
+
+          Minimal settings architecture
+          designed around elegant spacing,
+          immersive containers and premium
+          visual balance.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 4 -->
+
+      <section class="scroll-section">
+
+        <span>
+          04
+        </span>
+
+        <h1>
+          Personal Library
+        </h1>
+
+        <p>
+
+          Organized audio collections with
+          immersive playlists, favorites and
+          smooth music management systems.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 5 -->
+
+      <section class="scroll-section">
+
+        <span>
+          05
+        </span>
+
+        <h1>
+          Immersive Player
+        </h1>
+
+        <p>
+
+          Premium listening experience with
+          focused interaction, smooth controls
+          and cinematic audio visuals.
+
+        </p>
+
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    const sections =
+    document.querySelectorAll(
+    '.scroll-section'
+    );
+
+    const slides =
+    document.querySelectorAll(
+    '.phone-slide'
+    );
+
+    window.addEventListener(
+    'scroll',
+    ()=>{
+
+      let current = 0;
+
+      sections.forEach(
+      (section,index)=>{
+
+        const rect =
+        section.getBoundingClientRect();
+
+        if(
+          rect.top <= 200 &&
+          rect.bottom >= 200
+        ){
+          current = index;
+        }
+
+      });
+
+      slides.forEach(
+      (slide)=>{
+
+        slide.classList.remove(
+        'active-slide'
+        );
+
+      });
+
+      sections.forEach(
+      (section)=>{
+
+        section.classList.remove(
+        'active-text'
+        );
+
+      });
+
+      slides[current]
+      .classList.add(
+      'active-slide'
+      );
+
+      sections[current]
+      .classList.add(
+      'active-text'
+      );
+
+    });
+
+  </script>
+
+</body>
+
+</html>
