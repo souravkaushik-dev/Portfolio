@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8" />
@@ -11,10 +10,10 @@
   />
 
   <title>
-    Aera Showcase
+    AERA • Intelligent Productivity
   </title>
 
-  <!-- FONTS -->
+  <!-- FONT -->
 
   <link
     rel="preconnect"
@@ -28,105 +27,541 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
-  <!-- CSS -->
+  <!-- ICONS -->
 
   <link
     rel="stylesheet"
-    href="css/mockup/mockup.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      'Outfit',
+      sans-serif;
+
+      background:#040404;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* BACKGROUND */
+
+    .background{
+      position:fixed;
+      inset:0;
+      background:#040404;
+      z-index:-20;
+    }
+
+    .gradient{
+      position:fixed;
+      border-radius:50%;
+      filter:blur(180px);
+      z-index:-10;
+    }
+
+    .gradient-1{
+      width:480px;
+      height:480px;
+
+      background:#2563eb;
+
+      top:-140px;
+      right:-120px;
+
+      opacity:.15;
+    }
+
+    .gradient-2{
+      width:400px;
+      height:400px;
+
+      background:#ff5f2e;
+
+      bottom:-120px;
+      left:-120px;
+
+      opacity:.14;
+    }
+
+    /* LAYOUT */
+
+    .showcase{
+      display:flex;
+      gap:100px;
+      padding:120px 8%;
+    }
+
+    /* PHONE */
+
+    .phone-wrapper{
+      width:44%;
+      position:sticky;
+      top:60px;
+      height:100vh;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .phone{
+
+      width:370px;
+      height:790px;
+
+      border-radius:64px;
+
+      padding:10px;
+
+      position:relative;
+
+      background:
+      linear-gradient(
+        145deg,
+        #1f1f1f,
+        #050505
+      );
+
+      border:
+      1px solid rgba(255,255,255,.08);
+
+      box-shadow:
+      0 60px 140px rgba(0,0,0,.95),
+      inset 0 1px 1px rgba(255,255,255,.08);
+
+      overflow:hidden;
+
+      animation:
+      floatPhone 6s ease-in-out infinite;
+    }
+
+    /* REMOVE NOTCH */
+
+    .phone::before{
+      display:none;
+    }
+
+    /* EDGE LIGHT */
+
+    .phone::after{
+
+      content:'';
+
+      position:absolute;
+      inset:0;
+
+      border-radius:64px;
+
+      padding:1px;
+
+      background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.22),
+        rgba(255,255,255,0),
+        rgba(255,255,255,.05)
+      );
+
+      -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+      -webkit-mask-composite:xor;
+
+      pointer-events:none;
+    }
+
+    /* SCREEN */
+
+    .screen{
+      width:100%;
+      height:100%;
+
+      border-radius:54px;
+
+      overflow:hidden;
+
+      position:relative;
+
+      background:black;
+    }
+
+    /* REFLECTION */
+
+    .screen::before{
+
+      content:'';
+
+      position:absolute;
+
+      top:0;
+      left:-120%;
+
+      width:60%;
+      height:100%;
+
+      background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+      );
+
+      transform:skewX(-18deg);
+
+      animation:
+      reflection 6s linear infinite;
+
+      z-index:10;
+    }
+
+    /* SLIDES */
+
+    .slide{
+      position:absolute;
+      inset:0;
+
+      opacity:0;
+
+      transform:
+      scale(.88)
+      rotateY(10deg)
+      translateY(50px);
+
+      transition:
+      1s cubic-bezier(.22,1,.36,1);
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .active-slide{
+
+      opacity:1;
+
+      transform:
+      scale(1)
+      rotateY(0deg)
+      translateY(0);
+    }
+
+    .slide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* CONTENT */
+
+    .content{
+      flex:1;
+    }
+
+    .hero{
+      margin-bottom:140px;
+    }
+
+    .label{
+      color:#60a5fa;
+
+      font-size:14px;
+      font-weight:700;
+
+      letter-spacing:2px;
+    }
+
+    .title{
+
+      font-size:130px;
+      line-height:.9;
+
+      margin-top:20px;
+
+      letter-spacing:-6px;
+
+      background:
+      linear-gradient(
+        135deg,
+        #ffffff,
+        #60a5fa
+      );
+
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .description{
+
+      max-width:680px;
+
+      margin-top:34px;
+
+      color:#a1a1aa;
+
+      line-height:2;
+
+      font-size:19px;
+    }
+
+    /* STATS */
+
+    .stats{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+
+      margin-top:42px;
+    }
+
+    .stat-card{
+
+      padding:18px 24px;
+
+      border-radius:22px;
+
+      background:
+      rgba(255,255,255,.05);
+
+      border:
+      1px solid rgba(255,255,255,.08);
+
+      backdrop-filter:
+      blur(24px);
+    }
+
+    .stat-card h3{
+      font-size:26px;
+    }
+
+    .stat-card span{
+      color:#a1a1aa;
+      font-size:14px;
+    }
+
+    /* BUTTON */
+
+    .download-btn{
+
+      margin-top:42px;
+
+      display:inline-flex;
+      align-items:center;
+      gap:14px;
+
+      padding:18px 34px;
+
+      border-radius:24px;
+
+      text-decoration:none;
+
+      color:white;
+
+      background:
+      linear-gradient(
+        135deg,
+        #2563eb,
+        #ff5f2e
+      );
+
+      font-weight:600;
+
+      transition:.45s ease;
+    }
+
+    .download-btn:hover{
+
+      transform:
+      translateY(-8px)
+      scale(1.03);
+
+      box-shadow:
+      0 20px 60px rgba(37,99,235,.3);
+    }
+
+    /* SECTION */
+
+    .section{
+      min-height:100vh;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .section-number{
+
+      color:#60a5fa;
+
+      font-size:18px;
+      font-weight:700;
+
+      margin-bottom:18px;
+    }
+
+    .section h2{
+
+      font-size:92px;
+      line-height:.9;
+
+      letter-spacing:-4px;
+
+      margin-bottom:28px;
+    }
+
+    .section p{
+
+      max-width:680px;
+
+      color:#a1a1aa;
+
+      line-height:2;
+
+      font-size:18px;
+    }
+
+    /* ANIMATION */
+
+    @keyframes floatPhone{
+
+      0%{
+        transform:
+        translateY(0px)
+        rotate(-2deg);
+      }
+
+      50%{
+        transform:
+        translateY(-18px)
+        rotate(2deg);
+      }
+
+      100%{
+        transform:
+        translateY(0px)
+        rotate(-2deg);
+      }
+
+    }
+
+    @keyframes reflection{
+
+      0%{
+        left:-120%;
+      }
+
+      100%{
+        left:140%;
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media(max-width:950px){
+
+      .showcase{
+        flex-direction:column;
+      }
+
+      .phone-wrapper{
+        width:100%;
+        position:relative;
+        height:auto;
+      }
+
+      .phone{
+        width:100%;
+        max-width:350px;
+        height:740px;
+      }
+
+      .title{
+        font-size:76px;
+      }
+
+      .section h2{
+        font-size:56px;
+      }
+
+    }
+
+  </style>
 
 </head>
 
-<body class="app-page">
+<body>
 
   <!-- BACKGROUND -->
 
-  <div class="bg-grid"></div>
+  <div class="background"></div>
 
-  <div class="blur blur-1"></div>
-
-  <div class="blur blur-2"></div>
+  <div class="gradient gradient-1"></div>
+  <div class="gradient gradient-2"></div>
 
   <!-- SHOWCASE -->
 
-  <div class="showcase-wrapper">
+  <div class="showcase">
 
     <!-- PHONE -->
 
-    <div class="sticky-phone">
+    <div class="phone-wrapper">
 
-      <div class="phone-frame">
+      <div class="phone">
 
-        <div class="phone-display">
+        <div class="screen">
 
-          <!-- SCREEN 1 -->
+          <!-- SPLASH -->
 
-          <div class="phone-slide active-slide">
-
-            <img
-              src="images/onbaording.png"
-              class="phone-image"
-            />
-
+          <div class="slide active-slide">
+            <img src="images/aera_splash.png" />
           </div>
 
-          <!-- SCREEN 2 -->
+          <!-- HOME -->
 
-          <div class="phone-slide">
-
-            <img
-              src="images/week.png"
-              class="phone-image"
-            />
-
+          <div class="slide">
+            <img src="images/aera_home.png" />
           </div>
 
-          <!-- SCREEN 3 -->
+          <!-- STORIES -->
 
-          <div class="phone-slide">
-
-            <img
-              src="images/settings.png"
-              class="phone-image"
-            />
-
+          <div class="slide">
+            <img src="images/aera_stories.png" />
           </div>
 
-          <!-- SCREEN 4 -->
+          <!-- PRIVATE -->
 
-          <div class="phone-slide">
-
-            <img
-              src="images/story.png"
-              class="phone-image"
-            />
-
+          <div class="slide">
+            <img src="images/aera_privatestory.png" />
           </div>
 
-          <!-- SCREEN 5 -->
+          <!-- SETTINGS -->
 
-          <div class="phone-slide">
-
-            <img
-              src="images/storyvault.png"
-              class="phone-image"
-            />
-
+          <div class="slide">
+            <img src="images/aera_settings.png" />
           </div>
 
-          <!-- SCREEN 6 -->
+          <!-- CALENDRA -->
 
-          <div class="phone-slide">
-
-            <img
-              src="images/calendra.png"
-              class="phone-image"
-            />
-
+          <div class="slide">
+            <img src="images/aera_calendra.png" />
           </div>
 
         </div>
@@ -137,77 +572,91 @@
 
     <!-- CONTENT -->
 
-    <div class="scroll-sections">
+    <div class="content">
 
-      <!-- APP INFO -->
+      <!-- HERO -->
 
-      <div class="app-top-info">
+      <div class="hero">
 
-        <span class="app-label">
-          PRODUCTIVITY APP
+        <span class="label">
+          INTELLIGENT PRODUCTIVITY EXPERIENCE
         </span>
 
-        <h1 class="app-main-title">
+        <h1 class="title">
           AERA
         </h1>
 
-        <p class="app-main-description">
+        <p class="description">
 
-          Minimal planner, stories and
-          productivity application
-          designed with immersive
-          interaction systems and
-          elegant modern UI.
+          AERA is a premium productivity
+          ecosystem crafted around calm
+          interactions, immersive planning
+          and elegant storytelling.\n\n
+          Designed with Flutter and inspired
+          by modern Apple design systems,
+          AERA combines journaling,
+          private memories, scheduling
+          and task management into one
+          minimal futuristic experience.
 
         </p>
 
-        <div class="download-row">
+        <!-- STATS -->
 
-          <a
-            href="https://play.google.com/store/apps/details?id=com.studios.aera"
-            target="_blank"
-            class="playstore-btn"
-          >
+        <div class="stats">
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              fill="currentColor"
-              viewBox="0 0 16 16"
-            >
+          <div class="stat-card">
+            <h3>6</h3>
+            <span>Core Screens</span>
+          </div>
 
-              <path d="M14.222 7.386c.089.06.089.168 0 .228l-10.44 7.07c-.09.06-.198.008-.198-.104V.42c0-.112.108-.164.198-.104l10.44 7.07z"/>
+          <div class="stat-card">
+            <h3>Private</h3>
+            <span>Vault System</span>
+          </div>
 
-            </svg>
-
-            Download on Play Store
-
-          </a>
+          <div class="stat-card">
+            <h3>Flutter</h3>
+            <span>Built With</span>
+          </div>
 
         </div>
+
+        <!-- BUTTON -->
+
+        <a
+          href="https://play.google.com/store/apps/details?id=com.studios.aera"
+          target="_blank"
+          class="download-btn"
+        >
+
+          <i class="fa-brands fa-google-play"></i>
+
+          Download on Play Store
+
+        </a>
 
       </div>
 
       <!-- SECTION 1 -->
 
-      <section class="scroll-section active-text">
+      <section class="section">
 
-        <span>
+        <span class="section-number">
           01
         </span>
 
-        <h1>
-          Welcome Experience
-        </h1>
+        <h2>
+          Immersive Splash
+        </h2>
 
         <p>
 
-          Elegant onboarding crafted
-          with immersive typography,
-          premium spacing systems and
-          modern minimal interaction
-          design.
+          Minimal cinematic onboarding
+          crafted with elegant typography,
+          atmospheric spacing and calm
+          interaction systems introducing
+          the AERA productivity universe.
 
         </p>
 
@@ -215,23 +664,23 @@
 
       <!-- SECTION 2 -->
 
-      <section class="scroll-section">
+      <section class="section">
 
-        <span>
+        <span class="section-number">
           02
         </span>
 
-        <h1>
-          Home Experience
-        </h1>
+        <h2>
+          Smart Productivity Hub
+        </h2>
 
         <p>
 
-          Elegant productivity home
-          screen designed with immersive
-          task organization, minimal
-          layouts and smooth planning
-          interaction systems.
+          Organize your routines, tasks,
+          reminders and personal workflows
+          inside a modern productivity
+          dashboard designed around focus
+          and simplicity.
 
         </p>
 
@@ -239,22 +688,23 @@
 
       <!-- SECTION 3 -->
 
-      <section class="scroll-section">
+      <section class="section">
 
-        <span>
+        <span class="section-number">
           03
         </span>
 
-        <h1>
-          Minimal Settings
-        </h1>
+        <h2>
+          Daily Stories
+        </h2>
 
         <p>
 
-          Elegant configuration
-          architecture with soft
-          containers, immersive spacing
-          and premium visual hierarchy.
+          Capture memories, thoughts and
+          experiences through immersive
+          journaling spaces with elegant
+          layouts and distraction-free
+          storytelling systems.
 
         </p>
 
@@ -262,22 +712,23 @@
 
       <!-- SECTION 4 -->
 
-      <section class="scroll-section">
+      <section class="section">
 
-        <span>
+        <span class="section-number">
           04
         </span>
 
-        <h1>
-          Stories Space
-        </h1>
+        <h2>
+          Personal Vault
+        </h2>
 
         <p>
 
-          Capture thoughts, memories
-          and moments inside a
-          beautifully designed minimal
-          journaling environment.
+          Secure your hidden stories and
+          private memories inside a calm
+          encrypted vault environment
+          crafted with modern minimal
+          privacy-focused design.
 
         </p>
 
@@ -285,22 +736,23 @@
 
       <!-- SECTION 5 -->
 
-      <section class="scroll-section">
+      <section class="section">
 
-        <span>
+        <span class="section-number">
           05
         </span>
 
-        <h1>
-          Personal Vault
-        </h1>
+        <h2>
+          Elegant Preferences
+        </h2>
 
         <p>
 
-          Private secure vault system
-          for protecting personal
-          stories with elegant
-          authentication flow.
+          Beautiful settings architecture
+          featuring soft glass surfaces,
+          modern hierarchy and premium
+          customization experiences built
+          around simplicity.
 
         </p>
 
@@ -308,23 +760,23 @@
 
       <!-- SECTION 6 -->
 
-      <section class="scroll-section">
+      <section class="section">
 
-        <span>
+        <span class="section-number">
           06
         </span>
 
-        <h1>
-          Calendra
-        </h1>
+        <h2>
+          Calendra System
+        </h2>
 
         <p>
 
-          Elegant calendar experience
-          designed with immersive date
-          management, minimal scheduling
-          systems and smooth productivity
-          interaction.
+          Advanced scheduling experience
+          designed with immersive calendar
+          interactions, smooth transitions
+          and elegant task management
+          systems for modern planning.
 
         </p>
 
@@ -339,68 +791,52 @@
   <script>
 
     const sections =
-    document.querySelectorAll(
-    '.scroll-section'
-    );
+    document.querySelectorAll('.section');
 
     const slides =
-    document.querySelectorAll(
-    '.phone-slide'
-    );
+    document.querySelectorAll('.slide');
 
     window.addEventListener(
-    'scroll',
-    ()=>{
+      'scroll',
+      ()=>{
 
-      let current = 0;
+        let current = 0;
 
-      sections.forEach(
-      (section,index)=>{
+        sections.forEach(
+          (section,index)=>{
 
-        const rect =
-        section.getBoundingClientRect();
+            const rect =
+            section.getBoundingClientRect();
 
-        if(
-          rect.top <= 200 &&
-          rect.bottom >= 200
-        ){
-          current = index;
-        }
+            if(
+              rect.top <= 250 &&
+              rect.bottom >= 250
+            ){
 
-      });
+              current = index;
 
-      slides.forEach(
-      (slide)=>{
+            }
 
-        slide.classList.remove(
-        'active-slide'
+          }
         );
 
-      });
+        slides.forEach((slide)=>{
 
-      sections.forEach(
-      (section)=>{
+          slide.classList.remove(
+            'active-slide'
+          );
 
-        section.classList.remove(
-        'active-text'
+        });
+
+        slides[current]
+        .classList.add(
+          'active-slide'
         );
 
-      });
-
-      slides[current]
-      .classList.add(
-      'active-slide'
-      );
-
-      sections[current]
-      .classList.add(
-      'active-text'
-      );
-
-    });
+      }
+    );
 
   </script>
 
 </body>
-
 </html>

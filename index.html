@@ -1,148 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sourav Kaushik | Portfolio</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <title>
-    Sourav Kaushik | Portfolio
-  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap"
     rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-
-  <link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
 
   <link rel="stylesheet" href="css/style.css" />
-
 </head>
-
 <body>
 
-  <div class="bg-grid"></div>
-
-  <div class="blur blur-1"></div>
-
-  <div class="blur blur-2"></div>
+  <div class="bg"></div>
+  <div class="gradient gradient-1"></div>
+  <div class="gradient gradient-2"></div>
 
   <!-- NAVBAR -->
 
   <nav class="navbar glass">
 
-    <div class="logo">
-      SOURAV
-    </div>
+    <div class="logo">SOURAV</div>
 
     <div class="nav-links">
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#apps">
-        Apps
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#apps">Apps</a>
+      <a href="#contact">Contact</a>
     </div>
 
   </nav>
 
   <!-- HERO -->
 
-  <section class="hero reveal">
+  <section class="hero">
 
-    <div class="hero-left">
+    <div class="hero-left reveal">
 
-      <span class="hero-tag">
-        CEH • FLUTTER DEVELOPER
+      <span class="hero-badge">
+        Flutter Developer • CEH Certified
       </span>
 
       <h1>
-        SOURAV <br />
-        KAUSHIK
+        Building Premium
+        Digital Experiences.
       </h1>
 
-      <p class="hero-description">
-
-        Certified Ethical Hacker from EC-Council and
-        Flutter Developer creating minimal premium
-        Android experiences with smooth interaction
-        systems and modern UI design.
-
+      <p>
+        I'm Sourav Kaushik — Flutter developer,
+        UI designer and cybersecurity enthusiast
+        creating elegant Apple-inspired mobile
+        experiences with immersive interactions.
       </p>
 
       <div class="hero-buttons">
-
-        <a href="#apps" class="primary-btn">
-          Explore Apps
-        </a>
-
-        <a href="#contact" class="secondary-btn">
-          Contact
-        </a>
-
+        <a href="#apps" class="primary-btn">Explore Apps</a>
+        <a href="#contact" class="secondary-btn">Contact Me</a>
       </div>
 
     </div>
 
-    <div class="hero-right glass floating">
+    <div class="hero-right reveal glass">
 
-      <div class="hero-box glass-light">
-
-        <span class="dot"></span>
-
-        CEH Certified • 2022
-
+      <div class="hero-card glass-light">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <div>
+          <h3>6+ Apps</h3>
+          <span>Flutter Projects</span>
+        </div>
       </div>
 
-      <div class="hero-box glass-light">
-
-        <span class="dot"></span>
-
-        6+ Flutter Apps
-
+      <div class="hero-card glass-light">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <h3>CEH</h3>
+          <span>EC-Council Certified</span>
+        </div>
       </div>
 
-      <div class="hero-box glass-light">
-
-        <span class="dot"></span>
-
-        2 Apps Published
-
-      </div>
-
-      <div class="hero-box glass-light">
-
-        <span class="dot"></span>
-
-        Amity University
-
+      <div class="hero-card glass-light">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <div>
+          <h3>BCA</h3>
+          <span>Amity University</span>
+        </div>
       </div>
 
     </div>
@@ -151,306 +99,291 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
   <!-- ABOUT -->
 
-  <section
-    id="about"
-    class="section reveal"
-  >
+<!-- ========================= -->
+<!-- ABOUT SECTION -->
+<!-- ========================= -->
 
-    <div class="section-head">
+<section class="section reveal" id="about">
 
-      <span>
-        ABOUT
-      </span>
+  <div class="section-title">
 
-      <h2>
-        Minimal. Elegant. Secure.
-      </h2>
+    <span>ABOUT</span>
+
+    <h2>
+      Designing Experiences That Feel Alive
+    </h2>
+
+    <p class="section-description">
+
+      Flutter developer, UI engineer and
+      cybersecurity enthusiast focused on
+      crafting immersive premium digital
+      experiences inspired by modern
+      Apple interaction systems.
+
+    </p>
+
+  </div>
+
+  <!-- ABOUT CARD -->
+
+  <div class="about-wrapper">
+
+    <div class="about-card glass">
+
+      <div class="about-top">
+
+        <div class="about-profile">
+
+          <div class="profile-glow"></div>
+
+          <div class="profile-image">
+
+            <img
+              src="images/profile.jpeg"
+              alt="Sourav"
+            />
+
+          </div>
+
+        </div>
+
+        <div class="about-intro">
+
+          <span class="about-badge">
+            Flutter Developer • CEH Certified
+          </span>
+
+          <h3>
+            Sourav Kaushik
+          </h3>
+
+          <p>
+
+            I'm a passionate Flutter
+            developer and Certified Ethical
+            Hacker focused on building
+            premium modern mobile
+            experiences with immersive
+            interactions, elegant animations
+            and ultra minimal visual systems.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- ABOUT CONTENT -->
+
+      <div class="about-content">
+
+        <p>
+
+          My development philosophy focuses
+          on creating applications that feel
+          cinematic, fluid and emotionally
+          engaging — combining smooth motion,
+          scalable architecture and refined
+          interface systems into one seamless
+          experience.
+
+        </p>
+
+        <p>
+
+          I specialize in Flutter development,
+          UI engineering, glassmorphism design
+          systems, animation architecture and
+          modern interaction design inspired
+          by Apple aesthetics and futuristic
+          digital experiences.
+
+        </p>
+
+        <p>
+
+          Alongside development, I actively
+          explore ethical hacking, penetration
+          testing and secure application
+          systems as a Certified Ethical
+          Hacker (CEH), combining creativity
+          with security focused engineering.
+
+        </p>
+
+        <p>
+
+          My goal is to create applications
+          that are not only functional but
+          visually immersive, performance
+          driven and crafted with premium
+          attention to detail.
+
+        </p>
+
+      </div>
+
+      <!-- SKILLS -->
+
+      <div class="skills-grid">
+
+        <div class="skill-item">
+          <i class="fa-brands fa-flutter"></i>
+          Flutter
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-solid fa-code"></i>
+          Dart
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-brands fa-python"></i>
+          Python
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-brands fa-js"></i>
+          JavaScript
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          Ethical Hacking
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-solid fa-mobile-screen"></i>
+          Mobile UI/UX
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-solid fa-layer-group"></i>
+          Motion Design
+        </div>
+
+        <div class="skill-item">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          Glassmorphism
+        </div>
+
+      </div>
 
     </div>
 
-<div class="about-card glass">
+    <!-- EXPERIENCE -->
 
-  <span class="about-tag">
-    ABOUT ME
-  </span>
+    <div class="experience-card glass">
 
-  <h2 class="about-title">
-    Building immersive digital
-    experiences with minimalism,
-    security and modern interaction.
-  </h2>
+      <div class="experience-head">
 
-  <p>
+        <span>
+          EXPERIENCE
+        </span>
 
-    I'm <span class="highlight">Sourav Kaushik</span>,
-    a passionate Flutter App Developer,
-    UI Designer and Certified Ethical
-    Hacker (CEH) from EC-Council
-    2022 Batch.
+        <h3>
+          Professional Work
+        </h3>
 
-  </p>
+      </div>
 
-  <p>
+      <!-- EXPERIENCE ITEM -->
 
-    I specialize in creating premium
-    mobile applications with smooth
-    animations, glassmorphism UI systems,
-    modern interaction design and highly
-    immersive user experiences inspired
-    by minimal design philosophy.
+      <div class="experience-item">
 
-  </p>
+        <div class="experience-icon">
 
-  <p>
+          <i class="fa-solid fa-briefcase"></i>
 
-    Over the years, I have developed
-    multiple Flutter applications
-    focused on productivity, music,
-    journaling and modern utilities,
-    with apps successfully published
-    on the Google Play Store.
+        </div>
 
-  </p>
+        <div class="experience-content">
 
-  <p>
+          <div class="experience-top">
 
-    Alongside development, I also have
-    a strong interest in cybersecurity,
-    ethical hacking and secure software
-    architecture, helping me create
-    applications that are both elegant
-    and technically strong.
+            <h4>
+              Last Minute Deals App
+            </h4>
 
-  </p>
+            <span>
+              Flutter Developer
+            </span>
 
-  <p>
+          </div>
 
-    Currently, I am pursuing Bachelor
-    of Computer Applications (BCA)
-    from Amity University
-    (2023 – 2026) while continuously
-    exploring modern technologies,
-    frontend systems and scalable
-    application development.
+          <p>
 
-  </p>
+            Worked on API implementation,
+            complete UI redesign,
+            performance optimization and
+            critical bug fixing for the
+            Last Minute Deals mobile
+            application.\n\n
+            Improved application stability,
+            modernized the interaction
+            system and redesigned the UI
+            with smoother user experiences
+            and cleaner architecture.
 
-  <!-- SKILLS -->
+          </p>
 
-  <div class="skills-grid">
+        </div>
 
-    <div class="skill-item">
-      <i class="fa-brands fa-flutter"></i>
-      Flutter
-    </div>
+      </div>
 
-    <div class="skill-item">
-      <i class="fa-solid fa-code"></i>
-      Dart
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-brands fa-python"></i>
-      Python
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-brands fa-js"></i>
-      JavaScript
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-brands fa-html5"></i>
-      HTML5
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-brands fa-css3-alt"></i>
-      CSS3
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-solid fa-n"></i>
-      Next JS
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-solid fa-fire"></i>
-      Firebase
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-solid fa-database"></i>
-      REST APIs
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-solid fa-shield-halved"></i>
-      Ethical Hacking
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-solid fa-mobile-screen"></i>
-      UI/UX Design
-    </div>
-
-    <div class="skill-item">
-      <i class="fa-solid fa-layer-group"></i>
-      Glassmorphism UI
     </div>
 
   </div>
 
-</div>
+</section>
 
-  </section>
+  <!-- EDUCATION -->
 
-  <!-- APPS -->
+  <section class="section reveal" id="education">
 
-  <section
-    id="apps"
-    class="section reveal"
-  >
-
-    <div class="section-head">
-
-      <span>
-        PROJECTS
-      </span>
-
-      <h2>
-        Featured Applications
-      </h2>
-
+    <div class="section-title">
+      <span>EDUCATION</span>
+      <h2>Academic Journey</h2>
     </div>
 
-    <div class="apps-grid">
+    <div class="education-grid">
 
-      <!-- AERA -->
+      <div class="education-card glass">
 
-      <a
-        href="elunae.html"
-        class="app-link"
-      >
-
-        <div class="app-card glass hover-card">
-
-          <div class="app-icon">
-            A
-          </div>
-
-          <h3>
-            Aera
-          </h3>
-
-          <p>
-
-            Notes, tasks and scheduling
-            application with premium motion
-            design and smooth productivity
-            experience.
-
-          </p>
-
-          <div class="tag-row">
-
-            <span>
-              Flutter
-            </span>
-
-            <span>
-              Productivity
-            </span>
-
-          </div>
-
+        <div class="edu-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
         </div>
 
-      </a>
+        <h3>Bachelor of Computer Applications</h3>
 
-      <!-- ELUNAE -->
+        <h4>Amity University</h4>
 
-      <a
-        href="aera.html"
-        class="app-link"
-      >
+        <span>2023 — 2026</span>
 
-        <div class="app-card glass hover-card">
+        <p>
+          Pursuing BCA focused on Flutter development,
+          cybersecurity and scalable application systems.
+        </p>
 
-          <div class="app-icon">
-            E
-          </div>
+      </div>
 
-          <h3>
-            Elunae
-          </h3>
+      <div class="education-card glass">
 
-          <p>
-
-            Minimal music experience focused
-            on immersive interaction and
-            elegant modern UI systems.
-
-          </p>
-
-          <div class="tag-row">
-
-            <span>
-              Flutter
-            </span>
-
-            <span>
-              Music App
-            </span>
-
-          </div>
-
+        <div class="edu-icon">
+          <i class="fa-solid fa-shield"></i>
         </div>
 
-      </a>
+        <h3>Certified Ethical Hacker</h3>
 
-    </div>
+        <h4>EC-Council</h4>
 
-  </section>
+        <span>Certified • 2022</span>
 
-  <!-- CONTACT -->
-
-  <section
-    id="contact"
-    class="section reveal"
-  >
-
-    <div class="section-head">
-
-      <span>
-        CONTACT
-      </span>
-
-      <h2>
-        Let's Build Something
-      </h2>
-
-    </div>
-
-    <div class="contact-card glass">
-
-      <p>
-
-        Open for Flutter development,
-        UI/UX collaborations and
-        cybersecurity opportunities.
-
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#" class="primary-btn">
-          GitHub
-        </a>
-
-        <a href="#" class="secondary-btn">
-          LinkedIn
-        </a>
+        <p>
+          Trained in penetration testing,
+          ethical hacking and secure software architecture.
+        </p>
 
       </div>
 
@@ -458,14 +391,314 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
   </section>
 
+  <!-- APPS -->
+
+<!-- ========================= -->
+<!-- APPS SECTION -->
+<!-- ========================= -->
+
+<section class="section reveal" id="apps">
+
+  <div class="section-title">
+
+    <span>APPLICATIONS</span>
+
+    <h2>
+      Premium Digital Experiences
+    </h2>
+
+    <p class="section-description">
+
+      A collection of immersive Flutter
+      applications crafted with modern
+      aesthetics, smooth motion systems,
+      glassmorphism interfaces and
+      Apple-inspired interaction design.
+
+    </p>
+
+  </div>
+
+  <div class="apps-grid">
+
+    <!-- ========================= -->
+    <!-- AERA -->
+    <!-- ========================= -->
+<a
+  href="aera.html"
+  class="app-link"
+>
+
+  <div class="app-card glass hover-card">
+
+    <div class="app-glow blue-glow"></div>
+
+    <div class="app-top">
+
+      <!-- AERA IMAGE ICON -->
+
+      <div class="app-image-icon">
+
+        <img
+          src="images/aera.png"
+          alt="Aera App Icon"
+        />
+
+      </div>
+
+      <div class="app-arrow">
+
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+      </div>
+
+    </div>
+
+    <div class="app-content">
+
+      <span class="app-label">
+        PRODUCTIVITY
+      </span>
+
+      <h3>
+        AERA
+      </h3>
+
+      <p>
+
+        A premium productivity ecosystem
+        designed for notes, task
+        management, journaling,
+        scheduling and immersive
+        organization experiences.
+
+      </p>
+
+    </div>
+
+    <div class="tags">
+
+      <span>
+        Flutter
+      </span>
+
+      <span>
+        Productivity
+      </span>
+
+      <span>
+        Minimal
+      </span>
+
+    </div>
+
+  </div>
+
+</a>
+
+    <!-- ========================= -->
+    <!-- ELUNAE -->
+    <!-- ========================= -->
+
+    <a
+      href="aera.html"
+      class="app-link"
+    >
+
+      <div class="app-card glass hover-card">
+
+        <div class="app-glow purple-glow"></div>
+
+        <div class="app-top">
+
+      <div class="app-image-icon">
+
+        <img
+          src="images/elunae.png"
+          alt="Aera App Icon"
+        />
+
+      </div>
+
+          <div class="app-arrow">
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+          </div>
+
+        </div>
+
+        <div class="app-content">
+
+          <span class="app-label">
+            MUSIC EXPERIENCE
+          </span>
+
+          <h3>
+            ELUNAE
+          </h3>
+
+          <p>
+
+            An immersive music platform
+            inspired by Apple aesthetics
+            featuring cinematic layouts,
+            fluid playback systems and
+            elegant modern interactions.
+
+          </p>
+
+        </div>
+
+        <div class="tags">
+
+          <span>
+            Flutter
+          </span>
+
+          <span>
+            Music
+          </span>
+
+          <span>
+            Audio
+          </span>
+
+        </div>
+
+      </div>
+
+    </a>
+
+    <!-- ========================= -->
+    <!-- DOTTY -->
+    <!-- ========================= -->
+
+<a
+  href="dotty.html"
+  class="app-link"
+>
+
+  <div class="app-card glass hover-card">
+
+    <div class="app-glow orange-glow"></div>
+
+    <div class="app-top">
+
+      <!-- DOTTY IMAGE ICON -->
+
+      <div class="app-image-icon">
+
+        <img
+          src="images/dotty.png"
+          alt="Dotty App Icon"
+        />
+
+      </div>
+
+      <div class="app-arrow">
+
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+      </div>
+
+    </div>
+
+    <div class="app-content">
+
+      <span class="app-label">
+        WALLPAPER PLATFORM
+      </span>
+
+      <h3>
+        DOTTY
+      </h3>
+
+      <p>
+
+        A cinematic wallpaper experience
+        featuring immersive collections,
+        AMOLED optimized visuals,
+        ultra modern galleries and
+        premium browsing systems.
+
+      </p>
+
+    </div>
+
+    <div class="tags">
+
+      <span>
+        Flutter
+      </span>
+
+      <span>
+        Wallpapers
+      </span>
+
+      <span>
+        AMOLED
+      </span>
+
+    </div>
+
+  </div>
+
+</a>
+
+  </div>
+
+</section>
+
+  <!-- CONTACT -->
+
+  <section class="section reveal" id="contact">
+
+    <div class="section-title">
+      <span>CONTACT</span>
+      <h2>Let's Build Something Great</h2>
+    </div>
+
+    <div class="contact-card glass">
+
+<p>
+
+  Currently open to full-time roles,
+  freelance collaborations, startup
+  opportunities and innovative mobile
+  app projects focused on premium
+  digital experiences.\n\n
+
+  I’m actively looking to work with
+  companies, creators and teams that
+  value modern UI/UX, smooth interaction
+  systems and high-quality Flutter
+  development.\n\n
+
+  Whether it’s building scalable mobile
+  applications, redesigning user
+  experiences, implementing APIs,
+  optimizing performance or crafting
+  immersive animations — I’m always
+  excited to contribute to meaningful
+  products and ambitious ideas.
+
+</p>
+
+      <div class="hero-buttons">
+        <a href="https://github.com/souravkaushik-dev" class="primary-btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/sourav-kaushik-5597bb271/" class="secondary-btn">LinkedIn</a>
+      </div>
+
+    </div>
+
+  </section>
+
   <footer>
-
     © 2026 Sourav Kaushik
-
   </footer>
 
   <script src="js/script.js"></script>
 
 </body>
-
 </html>

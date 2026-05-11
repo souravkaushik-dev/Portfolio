@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    DOTTY • Premium Wallpaper Experience
+  </title>
+
+  <!-- FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ICONS -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      'Outfit',
+      sans-serif;
+
+      background:#030303;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* BACKGROUND */
+
+    .background{
+      position:fixed;
+      inset:0;
+      background:#030303;
+      z-index:-20;
+    }
+
+    .gradient{
+      position:fixed;
+      border-radius:50%;
+      filter:blur(180px);
+      z-index:-10;
+    }
+
+    .gradient-1{
+      width:500px;
+      height:500px;
+
+      background:#7c3aed;
+
+      top:-140px;
+      right:-120px;
+
+      opacity:.16;
+    }
+
+    .gradient-2{
+      width:420px;
+      height:420px;
+
+      background:#ec4899;
+
+      bottom:-140px;
+      left:-120px;
+
+      opacity:.14;
+    }
+
+    /* LAYOUT */
+
+    .showcase{
+      display:flex;
+      gap:100px;
+      padding:120px 8%;
+    }
+
+    /* PHONE */
+
+    .phone-wrapper{
+      width:44%;
+      position:sticky;
+      top:60px;
+      height:100vh;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .phone{
+
+      width:370px;
+      height:790px;
+
+      border-radius:64px;
+
+      padding:10px;
+
+      position:relative;
+
+      background:
+      linear-gradient(
+        145deg,
+        #1f1f1f,
+        #050505
+      );
+
+      border:
+      1px solid rgba(255,255,255,.08);
+
+      box-shadow:
+      0 60px 140px rgba(0,0,0,.95),
+      inset 0 1px 1px rgba(255,255,255,.08);
+
+      overflow:hidden;
+
+      animation:
+      floatPhone 6s ease-in-out infinite;
+    }
+
+    /* EDGE LIGHT */
+
+    .phone::after{
+
+      content:'';
+
+      position:absolute;
+      inset:0;
+
+      border-radius:64px;
+
+      padding:1px;
+
+      background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.22),
+        rgba(255,255,255,0),
+        rgba(255,255,255,.05)
+      );
+
+      -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+      -webkit-mask-composite:xor;
+
+      pointer-events:none;
+    }
+
+    /* SCREEN */
+
+    .screen{
+      width:100%;
+      height:100%;
+
+      border-radius:54px;
+
+      overflow:hidden;
+
+      position:relative;
+
+      background:black;
+    }
+
+    /* REFLECTION */
+
+    .screen::before{
+
+      content:'';
+
+      position:absolute;
+
+      top:0;
+      left:-120%;
+
+      width:60%;
+      height:100%;
+
+      background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+      );
+
+      transform:skewX(-18deg);
+
+      animation:
+      reflection 6s linear infinite;
+
+      z-index:10;
+    }
+
+    /* SLIDES */
+
+    .slide{
+      position:absolute;
+      inset:0;
+
+      opacity:0;
+
+      transform:
+      scale(.88)
+      rotateY(10deg)
+      translateY(50px);
+
+      transition:
+      1s cubic-bezier(.22,1,.36,1);
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .active-slide{
+
+      opacity:1;
+
+      transform:
+      scale(1)
+      rotateY(0deg)
+      translateY(0);
+    }
+
+    .slide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* CONTENT */
+
+    .content{
+      flex:1;
+    }
+
+    .hero{
+      margin-bottom:140px;
+    }
+
+    .label{
+      color:#d8b4fe;
+
+      font-size:14px;
+      font-weight:700;
+
+      letter-spacing:2px;
+    }
+
+    .title{
+
+      font-size:130px;
+      line-height:.9;
+
+      margin-top:20px;
+
+      letter-spacing:-6px;
+
+      background:
+      linear-gradient(
+        135deg,
+        #ffffff,
+        #d8b4fe
+      );
+
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .description{
+
+      max-width:680px;
+
+      margin-top:34px;
+
+      color:#a1a1aa;
+
+      line-height:2;
+
+      font-size:19px;
+    }
+
+    /* STATS */
+
+    .stats{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+
+      margin-top:42px;
+    }
+
+    .stat-card{
+
+      padding:18px 24px;
+
+      border-radius:22px;
+
+      background:
+      rgba(255,255,255,.05);
+
+      border:
+      1px solid rgba(255,255,255,.08);
+
+      backdrop-filter:
+      blur(24px);
+    }
+
+    .stat-card h3{
+      font-size:26px;
+    }
+
+    .stat-card span{
+      color:#a1a1aa;
+      font-size:14px;
+    }
+
+    /* BUTTON */
+
+    .download-btn{
+
+      margin-top:42px;
+
+      display:inline-flex;
+      align-items:center;
+      gap:14px;
+
+      padding:18px 34px;
+
+      border-radius:24px;
+
+      text-decoration:none;
+
+      color:white;
+
+      background:
+      linear-gradient(
+        135deg,
+        #7c3aed,
+        #ec4899
+      );
+
+      font-weight:600;
+
+      transition:.45s ease;
+    }
+
+    .download-btn:hover{
+
+      transform:
+      translateY(-8px)
+      scale(1.03);
+
+      box-shadow:
+      0 20px 60px rgba(124,58,237,.3);
+    }
+
+    /* SECTION */
+
+    .section{
+      min-height:100vh;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .section-number{
+
+      color:#d8b4fe;
+
+      font-size:18px;
+      font-weight:700;
+
+      margin-bottom:18px;
+    }
+
+    .section h2{
+
+      font-size:92px;
+      line-height:.9;
+
+      letter-spacing:-4px;
+
+      margin-bottom:28px;
+    }
+
+    .section p{
+
+      max-width:680px;
+
+      color:#a1a1aa;
+
+      line-height:2;
+
+      font-size:18px;
+    }
+
+    /* ANIMATION */
+
+    @keyframes floatPhone{
+
+      0%{
+        transform:
+        translateY(0px)
+        rotate(-2deg);
+      }
+
+      50%{
+        transform:
+        translateY(-18px)
+        rotate(2deg);
+      }
+
+      100%{
+        transform:
+        translateY(0px)
+        rotate(-2deg);
+      }
+
+    }
+
+    @keyframes reflection{
+
+      0%{
+        left:-120%;
+      }
+
+      100%{
+        left:140%;
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media(max-width:950px){
+
+      .showcase{
+        flex-direction:column;
+      }
+
+      .phone-wrapper{
+        width:100%;
+        position:relative;
+        height:auto;
+      }
+
+      .phone{
+        width:100%;
+        max-width:350px;
+        height:740px;
+      }
+
+      .title{
+        font-size:76px;
+      }
+
+      .section h2{
+        font-size:56px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+
+  <div class="background"></div>
+
+  <div class="gradient gradient-1"></div>
+  <div class="gradient gradient-2"></div>
+
+  <!-- SHOWCASE -->
+
+  <div class="showcase">
+
+    <!-- PHONE -->
+
+    <div class="phone-wrapper">
+
+      <div class="phone">
+
+        <div class="screen">
+
+          <!-- SPLASH -->
+
+          <div class="slide active-slide">
+            <img src="images/dotty_splash.png" />
+          </div>
+
+          <!-- HOME -->
+
+          <div class="slide">
+            <img src="images/dotty_home.png" />
+          </div>
+
+          <!-- CATEGORY -->
+
+          <div class="slide">
+            <img src="images/dotty_categories.png" />
+          </div>
+
+          <!-- DETAILS -->
+
+          <div class="slide">
+            <img src="images/dotty_indetails.png" />
+          </div>
+
+          <!-- FULLSCREEN -->
+
+          <div class="slide">
+            <img src="images/dotty_fullscreen.png" />
+          </div>
+
+          <!-- SAVED -->
+
+          <div class="slide">
+            <img src="images/dotty_save.png" />
+          </div>
+
+          <!-- SETTINGS -->
+
+          <div class="slide">
+            <img src="images/dotty_settings.png" />
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+      <!-- HERO -->
+
+      <div class="hero">
+
+        <span class="label">
+          CINEMATIC WALLPAPER EXPERIENCE
+        </span>
+
+        <h1 class="title">
+          DOTTY
+        </h1>
+
+        <p class="description">
+
+          DOTTY is a premium wallpaper
+          platform crafted with immersive
+          visuals, fluid interactions and
+          ultra modern aesthetics.\n\n
+          Built for minimal enthusiasts,
+          the experience combines cinematic
+          wallpaper collections, AMOLED
+          optimized visuals and elegant
+          Apple-inspired motion systems
+          into one immersive ecosystem.
+
+        </p>
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+          <div class="stat-card">
+            <h3>4K</h3>
+            <span>Ultra Wallpapers</span>
+          </div>
+
+          <div class="stat-card">
+            <h3>AMOLED</h3>
+            <span>Optimized</span>
+          </div>
+
+          <div class="stat-card">
+            <h3>Fluid</h3>
+            <span>Motion Design</span>
+          </div>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <a
+          href="https://play.google.com/store/apps/details?id=com.studios.dotty"
+          target="_blank"
+          class="download-btn"
+        >
+
+          <i class="fa-brands fa-google-play"></i>
+
+          Download on Play Store
+
+        </a>
+
+      </div>
+
+      <!-- SECTION 1 -->
+
+      <section class="section">
+
+        <span class="section-number">
+          01
+        </span>
+
+        <h2>
+          Immersive Splash
+        </h2>
+
+        <p>
+
+          Elegant cinematic onboarding
+          crafted with premium typography,
+          soft gradients and smooth
+          transitions introducing the
+          immersive DOTTY experience.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 2 -->
+
+      <section class="section">
+
+        <span class="section-number">
+          02
+        </span>
+
+        <h2>
+          Curated Discoveries
+        </h2>
+
+        <p>
+
+          Explore beautifully curated
+          wallpaper collections featuring
+          cinematic visuals, minimal
+          aesthetics and ultra modern
+          interface experiences.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 3 -->
+
+      <section class="section">
+
+        <span class="section-number">
+          03
+        </span>
+
+        <h2>
+          Collection Spaces
+        </h2>
+
+        <p>
+
+          Browse immersive wallpaper
+          categories crafted around
+          anime, automotive, minimal
+          and futuristic visual themes
+          with fluid browsing systems.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 4 -->
+
+      <section class="section">
+
+        <span class="section-number">
+          04
+        </span>
+
+        <h2>
+          Wallpaper Details
+        </h2>
+
+        <p>
+
+          Deep wallpaper previews with
+          elegant cinematic layouts,
+          immersive metadata and premium
+          ultra minimal interaction
+          systems for modern devices.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 5 -->
+
+      <section class="section">
+
+        <span class="section-number">
+          05
+        </span>
+
+        <h2>
+          Fullscreen Experience
+        </h2>
+
+        <p>
+
+          Experience wallpapers in
+          immersive fullscreen mode with
+          ultra clean presentation,
+          smooth transitions and
+          distraction-free visuals.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 6 -->
+
+      <section class="section">
+
+        <span class="section-number">
+          06
+        </span>
+
+        <h2>
+          Personal Collection
+        </h2>
+
+        <p>
+
+          Save your favorite immersive
+          wallpapers into elegant private
+          collections crafted around
+          cinematic personalization
+          and minimal organization.
+
+        </p>
+
+      </section>
+
+      <!-- SECTION 7 -->
+
+      <section class="section">
+
+        <span class="section-number">
+          07
+        </span>
+
+        <h2>
+          Elegant Preferences
+        </h2>
+
+        <p>
+
+          Beautiful settings architecture
+          featuring dark mode systems,
+          smooth controls and premium
+          customization designed around
+          ultra minimal aesthetics.
+
+        </p>
+
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    const sections =
+    document.querySelectorAll('.section');
+
+    const slides =
+    document.querySelectorAll('.slide');
+
+    window.addEventListener(
+      'scroll',
+      ()=>{
+
+        let current = 0;
+
+        sections.forEach(
+          (section,index)=>{
+
+            const rect =
+            section.getBoundingClientRect();
+
+            if(
+              rect.top <= 250 &&
+              rect.bottom >= 250
+            ){
+
+              current = index;
+
+            }
+
+          }
+        );
+
+        slides.forEach((slide)=>{
+
+          slide.classList.remove(
+            'active-slide'
+          );
+
+        });
+
+        slides[current]
+        .classList.add(
+          'active-slide'
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
